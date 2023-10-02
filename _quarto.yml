@@ -9,15 +9,21 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - setup.qmd
   sidebar:
     style: "docked"
     search: true
     contents:
       - section: "Getting Started"
         contents:
+          - markdown/recap.qmd
+          - markdown/quality.qmd
+          - markdown/recap_questions.qmd
       - section: "Getting Results"
         contents:
-          - tutorials/integration.ipynb
+          - section: "Integration"
+            contents:
+              - notebooks/integration.ipynb
 
 format:
   html:
