@@ -1,0 +1,21 @@
+---
+title: "Introduction to integration"
+---
+
+> If one looks at the different problems of the integral calculus which arise naturally when one wishes to go deep into the different parts of physics, it is impossible not to be struck by the analogies existing. - Henri Poincaré
+
+One of the most basic but also most important applications of computers in physics is the evaluation of integrals. 
+Integrals occur widely in physics and, while some integrals can be done analytically, many cannot. 
+In this lesson we will learn several methods for numerical integration and, as part of this, we will learn how to generate random numbers.
+
+### Before you begin
+
+- Check that Python and Jupyter Notebook are installed
+- Launch a Jupyter notebook 
+
+Please see the [Setup](../setup.qmd) page for more details.
+
+### External resources
+
+- Textbook: Mark Newman Computational Physics Chapters 5.1-5.4 and 10.2
+

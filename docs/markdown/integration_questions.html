@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Physics - Questions</title>
+<title>Computational Physics - Integration questions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/recap.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../markdown/recap_questions.html">Questions</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Getting Results</li><li class="breadcrumb-item"><a href="../markdown/integration_introduction.html">Integration</a></li><li class="breadcrumb-item"><a href="../markdown/integration_questions.html">Questions</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/recap_questions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../markdown/recap_questions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Questions</span></a>
   </div>
 </li>
@@ -166,16 +166,16 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Integration</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/integration_introduction.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../markdown/integration_introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/integration_questions.html" class="sidebar-item-text sidebar-link">
+  <a href="../markdown/integration_questions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Questions</span></a>
   </div>
 </li>
@@ -211,10 +211,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#altitude-of-a-satellite" id="toc-altitude-of-a-satellite" class="nav-link active" data-scroll-target="#altitude-of-a-satellite">Altitude of a satellite</a></li>
-  <li><a href="#the-emission-lines-of-hydrogen" id="toc-the-emission-lines-of-hydrogen" class="nav-link" data-scroll-target="#the-emission-lines-of-hydrogen">The emission lines of hydrogen</a></li>
-  <li><a href="#calculating-plancks-constant" id="toc-calculating-plancks-constant" class="nav-link" data-scroll-target="#calculating-plancks-constant">Calculating Planck’s constant</a></li>
-  <li><a href="#the-madelung-constant" id="toc-the-madelung-constant" class="nav-link" data-scroll-target="#the-madelung-constant">The Madelung constant</a></li>
+  <li><a href="#the-stefan-boltzmann-constant" id="toc-the-stefan-boltzmann-constant" class="nav-link active" data-scroll-target="#the-stefan-boltzmann-constant">The Stefan-Boltzmann constant</a></li>
+  <li><a href="#volume-of-a-sphere" id="toc-volume-of-a-sphere" class="nav-link" data-scroll-target="#volume-of-a-sphere">Volume of a sphere</a></li>
+  <li><a href="#the-stefan-boltzmann-constant-re-visited" id="toc-the-stefan-boltzmann-constant-re-visited" class="nav-link" data-scroll-target="#the-stefan-boltzmann-constant-re-visited">The Stefan-Boltzmann constant re-visited</a></li>
   </ul>
 </nav>
     </div>
@@ -223,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Questions</h1>
+<h1 class="title">Integration questions</h1>
 </div>
 
 
@@ -238,53 +237,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="altitude-of-a-satellite" class="level1">
-<h1>Altitude of a satellite</h1>
-<p>A satellite is launched into a circular orbit around the earth so that it orbits the planet once every <span class="math inline">\(T\)</span> seconds. The altitude <span class="math inline">\(h\)</span> above the Earth’s surface that the satellite must have is:</p>
-<p><span class="math inline">\(h = \left(\frac{GMT^2}{4\pi^2}\right)^{\frac{1}{3}} - R\)</span></p>
-<p>where <span class="math inline">\(G\)</span> is Newton’s gravitational constant, <span class="math inline">\(M\)</span> is the mass of the Earth, and <span class="math inline">\(R\)</span> is the radius.</p>
+<section id="the-stefan-boltzmann-constant" class="level2">
+<h2 class="anchored" data-anchor-id="the-stefan-boltzmann-constant">The Stefan-Boltzmann constant</h2>
+<p>Planck’s law tells us that in the angular frequency interval <span class="math inline">\(\omega\)</span> to <span class="math inline">\(\omega+\mathrm{d}\omega\)</span>, a black-body of unit area and temperature <span class="math inline">\(T\)</span> radiates electromagnetically an amount of thermal energy per second equal to <span class="math inline">\(I(\omega)\mathrm{d}\omega\)</span>, where</p>
+<p><span class="math display">\[I(\omega) = \frac{\hbar}{4\pi^2\mathrm{c}^2}\frac{\omega}{(\mathrm{e}^{\frac{\hbar\omega}{k_\mathrm{B}T}}-1)}.\]</span></p>
+<p>The quantum theory of modern physics was born with Planck’s law. Up until this point, an outstanding problem in physics was the ultra-violet catastrophe, a prediction from classical physics that a black body at thermal equilibrium would emit an unbounded quantity of energy as wavelength decreased into the ultraviolet range. This was in stark contrast to what was being measured experimentally. To resolve this, Planck assumed that electromagnetic radiation can only be absorbed or emitted in discrete packets (quanta) and from this derives Planck’s law as shown above. Planck’s law was in agreement with experimental results and the Stefan-Boltzmann law, which states:</p>
+<p><span class="math display">\[W = \sigma T^4\]</span></p>
+<p>where <span class="math inline">\(\sigma\)</span> is the Stefan-Boltzmann constant.</p>
+<p>Einstein later postulated that the discrete quanta are real, physical particles (photons) and used this to explain the photoelectric effect. This research resulted in Einstein receiving the Nobel prize for physics in 1921.</p>
+<p>By substituting <span class="math inline">\(x = \frac{\hbar\omega}{k_\mathrm{B}T}\)</span> we can deduce that the total rate of energy radiation by a black body per unit area, over all frequencies, is</p>
+<p><span class="math display">\[W = \frac{k_\mathrm{B}^4T^4}{4\pi^2\mathrm{c}^2\hbar^3}\int_0^\infty\frac{x^3}{(\mathrm{e}^x-1)}\mathrm{d}x.\]</span></p>
 <ol type="a">
-<li><p>Write a piece of code which calculates the altitude <span class="math inline">\(h\)</span> (in metres) for a given value of <span class="math inline">\(T\)</span> (in seconds).</p></li>
-<li><p>Use this code to calculate the altitude of satellites that orbit the Earth once a day (a “geosynchronous” orbit) and once every 45 minutes. What can you conclude from this final calculation?</p></li>
+<li><p>We will approximate the exact expression, an integral from 0 to <span class="math inline">\(\infty\)</span>, using an integral with finite limits. Plot the integrand as a function of <span class="math inline">\(x\)</span> to justify your choice of limits.</p></li>
+<li><p>Use the rectangular slice method to evaluate the integral in the expression for <span class="math inline">\(W\)</span></p></li>
+<li><p>Use your value for the integral above to compute a value for the Stefan-Boltzmann constant to three significant figures. Check your result against the known value (available in the <code>scipy.constants</code> library).</p></li>
+<li><p>Show that the error of your estimate scales linearly with the width <span class="math inline">\(h\)</span> of the rectangular slices used to approximate the integral.</p></li>
 </ol>
 </section>
-<section id="the-emission-lines-of-hydrogen" class="level1">
-<h1>The emission lines of hydrogen</h1>
-<p><img src="../images/hydrogen_emission.png" class="img-fluid"></p>
-<p>There is a simple and famous formula for calculating the wavelengths <span class="math inline">\(\lambda\)</span> of the emission lines of the hydrogen atom.</p>
-<p><span class="math inline">\(\frac{1}{\lambda} = R\left(\frac{1}{m^2} - \frac{1}{n^2}\right)\)</span></p>
-<p>where R is the Rydberg constant <span class="math inline">\(R = 1.097\times 10^{-2}\mathrm{nm}^{-1}\)</span> and <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers and <span class="math inline">\(n&gt;m\)</span>.</p>
+<section id="volume-of-a-sphere" class="level2">
+<h2 class="anchored" data-anchor-id="volume-of-a-sphere">Volume of a sphere</h2>
+<p>We have seen that performing an integral over one variable requires us to take samples across a one-dimensional grid. Similarly, integration over two variables requires us to take samples on a two-dimensional grid, and so on. The number of grid points required scales exponentially with the number of variables, so that integrals over three or more dimensions can quickly become unmanageable. In this case, Monte Carlo integration can be very useful.</p>
+<p>The volume of a sphere with unit radius in three dimensions is given by:</p>
+<p><span class="math display">\[V = \int\int\int_{-1}^1f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z\]</span></p>
+<p>where <span class="math inline">\(f(x,y,z)=1\)</span> everywhere inside the sphere and zero everywhere outside.</p>
 <ol type="a">
-<li>Write a piece of code to calculate the first five transitions in the Lyman series (<span class="math inline">\(m=1\)</span>, transitions to the ground state, emission in the UV-range), Balmer series (<span class="math inline">\(m=2\)</span>, transitions to the first excited state, emissions in the visible region) and Paschen series (<span class="math inline">\(m=3\)</span>, emissions in the infra-red).</li>
+<li><p>Use Monte Carlo integration to estimate the volume of this sphere using 100 random points.</p></li>
+<li><p>Increase the number of random points until you reach an estimate that is exact to three significant figures.</p></li>
+<li><p>By considering how many points would need to be sampled, estimate the length of time it would take to reach the same level of accuracy using a Riemann slice type method.</p></li>
 </ol>
 </section>
-<section id="calculating-plancks-constant" class="level1">
-<h1>Calculating Planck’s constant</h1>
-<p>When light is shone on the surface of a metal, the photons in the light can excite (transfer energy to) electrons in the metal and, sometimes, eject them from the surface into the free space above. The energy of the ejected electron can be calculated by measuring the minimum voltage <span class="math inline">\(V\)</span> that stops the electron moving.</p>
-<p>We know that the energy of an ejected electron is equal to the energy of the photon that excited it minus the workfunction <span class="math inline">\(\phi\)</span> (which is the energy needed to remove it from the surface) and that the energy of a single photon is <span class="math inline">\(hf\)</span> where <span class="math inline">\(h\)</span> is Planck’s constant and <span class="math inline">\(f\)</span> is the frequency of light. Mathematically this can be expressed as:</p>
-<p><span class="math inline">\(eV = hf - \phi\)</span>,</p>
-<p>where <span class="math inline">\(e\)</span> is the charge of the electron.</p>
+<section id="the-stefan-boltzmann-constant-re-visited" class="level2">
+<h2 class="anchored" data-anchor-id="the-stefan-boltzmann-constant-re-visited">The Stefan-Boltzmann constant re-visited</h2>
+<p>In the Riemann sums tutorial question we use rectangular slices to estimate the Stefan-Boltzmann constant to three significant figures. The trapezoidal rule is a neat extension to rectangular slices, where the value at the start and end of each segment is considered. It can be expressed as</p>
+<p><span class="math display">\[\int^b_af(x)\mathrm{d}x = h\left[\frac{1}{2}f(a)+\frac{1}{2}f(b)+\sum_{k=1}^{N-1}f(a+kh)\right]\]</span></p>
 <ol type="a">
-<li>Read in the photoelectric measurement data from the file <a href="https://nu-cem.github.io/CompPhys/data/Planck.txt">Planck.txt</a>. The first column contains frequencies <span class="math inline">\(f\)</span> is hertz and the second column contains voltages <span class="math inline">\(V\)</span>. Use this data to plot <span class="math inline">\(V\)</span> vs <span class="math inline">\(f\)</span>. Think about the plot type - does a scatter plot of line plot make most sense?</li>
-</ol>
-<p>The least-squares method is very commonly used for fitting a polynomial to a set of data. As it is so prevalent in physics and engineering, you are encouraged to watch <a href="https://www.youtube.com/watch?v=YwZYSTQs-Hk">this video</a> which give an intuitive and mathematical description of the method.</p>
-<ol start="2" type="a">
-<li><p>Fit a straight line (polynomial of degree one) to the data using the least-squares method implemented in <a href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code>numpy.polyfit</code></a>. Overlay this line on your data points.</p></li>
-<li><p>Using the gradient of the fitted line calculate a value for Planck’s constant. Compare this to values you can find online.</p></li>
-</ol>
-</section>
-<section id="the-madelung-constant" class="level1">
-<h1>The Madelung constant</h1>
-<p>The Madelung constant gives the total electric potential felt by an atom in a solid. It depends on the charge and position of other nearby atoms.</p>
-<p>Consider the compound sodium chloride. These are arranged on a cubic lattice, with sodium having a positive charge (<span class="math inline">\(+e\)</span>) and chlorine having a negative charge (<span class="math inline">\(-e\)</span>). If each atom position is given by integers <span class="math inline">\((i,j,k)\)</span> then the sodium atoms are at positions where <span class="math inline">\(i+j+k\)</span> is even and the chlorine atoms are at positions where <span class="math inline">\(i+j+k\)</span> is odd.</p>
-<p><img src="../images/NaCl.png" class="img-fluid"></p>
-<p>For an atom at <span class="math inline">\(i=j=k=0\)</span>, the Madelung constant <span class="math inline">\(M\)</span> can be approximated by using the following formulae:</p>
-<p><span class="math inline">\(V_\mathrm{total} = \sum_{i,j,k} V(i,j,k) = \frac{e}{4\pi\epsilon_0a}M\)</span></p>
-<p><span class="math inline">\(V(i,j,k) = \pm\\frac{e}{4\pi\epsilon_0r}\)</span></p>
-<p>where <span class="math inline">\(r\)</span> is the distance from the origin to the atom at position <span class="math inline">\((i,j,k)\)</span> and <span class="math inline">\(a\)</span> is the atom spacing. The summation runs from <span class="math inline">\(i,j,k=-L\)</span> to <span class="math inline">\(i,j,k=L\)</span> but not including <span class="math inline">\(i,j,k=0\)</span> (otherwise the expression would “blow up”).</p>
-<ol type="a">
-<li><p>Write an expression (in Markdown/LaTeX) for the distance <span class="math inline">\(r\)</span> in terms of <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span> and <span class="math inline">\(a\)</span>.</p></li>
-<li><p>Calculate the Madelung constant for sodium chloride using a large a value as L as you can (so the code runs in about a minute or less). How does it compare with published values?</p></li>
+<li><p>Use the trapezoidal rule to re-calculate the Stefan-Boltzmann constant to three significant figures</p></li>
+<li><p>Demonstrate that the error scales quadratically with <span class="math inline">\(h^2\)</span>, and that the trapezoidal rule is more computationally efficient than using rectangular slices</p></li>
+<li><p>The error <span class="math inline">\(\epsilon_n\)</span> on the nth estimate of an integral is given by <span class="math inline">\(\epsilon_n = \frac{1}{3}(I_n-I_{n-1})\)</span>. Using this expression, write a programme that calculates the Stefan-Boltzmann with a maximum absolute error of 1E-5.</p></li>
 </ol>
 
 

@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Getting Results</li><li class="breadcrumb-item"><a href="../notebooks/integration.html">Integration</a></li><li class="breadcrumb-item"><a href="../notebooks/integration.html">Riemann sums</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Getting Results</li><li class="breadcrumb-item"><a href="../markdown/integration_introduction.qmd">Integration</a></li><li class="breadcrumb-item"><a href="../notebooks/integration.html">Riemann sums</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -184,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../markdown/recap_questions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Recap questions</span></a>
+ <span class="menu-text">Questions</span></a>
   </div>
 </li>
       </ul>
@@ -209,8 +209,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../markdown/integration_introduction.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../notebooks/integration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Riemann sums</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/monte_carlo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monte Carlo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../markdown/integration_questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Questions</span></a>
   </div>
 </li>
       </ul>
@@ -233,6 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-rectangular-slices-method-can-be-translated-to-python-code-in-a-straight-forward-manner" id="toc-the-rectangular-slices-method-can-be-translated-to-python-code-in-a-straight-forward-manner" class="nav-link" data-scroll-target="#the-rectangular-slices-method-can-be-translated-to-python-code-in-a-straight-forward-manner">The rectangular slices method can be translated to Python code in a straight-forward manner</a></li>
   <li><a href="#riemann-sums-can-be-adapted-for-use-with-discrete-data" id="toc-riemann-sums-can-be-adapted-for-use-with-discrete-data" class="nav-link" data-scroll-target="#riemann-sums-can-be-adapted-for-use-with-discrete-data">Riemann sums can be adapted for use with discrete data</a></li>
   <li><a href="#higher-order-riemann-sums-increase-the-accuracy-of-our-approximations" id="toc-higher-order-riemann-sums-increase-the-accuracy-of-our-approximations" class="nav-link" data-scroll-target="#higher-order-riemann-sums-increase-the-accuracy-of-our-approximations">Higher-order Riemann sums increase the accuracy of our approximations</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test your understanding</a></li>
   </ul>
 </nav>
     </div>
@@ -421,20 +440,75 @@ Keypoints
 </ul>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+</section>
+<section id="test-your-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-understanding">Test your understanding</h3>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Test your understanding
+Integrating a semicircle
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ul>
-<li><a href="">Quick test questions</a></li>
-<li><a href="">Extended questions</a></li>
-</ul>
+<ol type="a">
+<li>Use Riemann sums (with 10 rectangular slices) to calculate the value of the integral:</li>
+</ol>
+<p><span class="math display">\[ I = \int_{-1}^1\sqrt{1-x^2}\mathrm{d}x \]</span></p>
+<ol start="2" type="a">
+<li><p>How does this compare to exact answer? (Hint: the integrand is a semicircle of radius 1)</p></li>
+<li><p>How can you improve the accuracy of your estimate?</p></li>
+</ol>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>We can use the same approach as in the tutorial, but with a different function for calculating the integrand.</li>
+</ol>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> semicircle(x):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> math.sqrt(<span class="dv">1</span><span class="op">-</span>x<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rectangular_slice_integral(f_x, a, b, N):</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    integral <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> (b<span class="op">-</span>a) <span class="op">/</span> N   <span class="co"># h is the width of each slice</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N):</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> a <span class="op">+</span> h<span class="op">*</span>i <span class="co"># the x value for the slice</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        integral <span class="op">+=</span> f_x(x)<span class="op">*</span>h</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> integral</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>rectangular_slice_integral(semicircle, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>1.5691342555492505</code></pre>
+<ol start="2" type="a">
+<li>The exact answer is <span class="math inline">\(\frac{\pi}{2}\)</span>. The error on our calculation is</li>
+</ol>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>math.pi<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> rectangular_slice_integral(semicircle, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>0.0016620712456461018</code></pre>
+<ol start="3" type="a">
+<li>To improve the accuracy we can use a larger number of slices:</li>
+</ol>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>math.pi<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> rectangular_slice_integral(semicircle, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>5.2588293825595045e-05</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
