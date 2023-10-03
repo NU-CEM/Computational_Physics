@@ -4,6 +4,8 @@ title: "Code Quality"
 
 ### 1. Document your code
 
+> Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do - Donald Knuth, literate programming
+
 There are multiple ways you can document your code. Below are three examples:
 
 #### Docstrings
