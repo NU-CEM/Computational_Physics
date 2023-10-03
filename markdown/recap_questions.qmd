@@ -26,6 +26,8 @@ where R is the Rydberg constant $R = 1.097\times 10^{-2}\mathrm{nm}^{-1}$ and $m
 
 a) Write a piece of code to calculate the first five transitions in the Lyman series ($m=1$, transitions to the ground state, emission in the UV-range), Balmer series ($m=2$, transitions to the first excited state, emissions in the visible region) and Paschen series ($m=3$, emissions in the infra-red).
 
+b) Compare your answer to the energies indicated in the figure.
+
 # Calculating Planck's constant
 
 When light is shone on the surface of a metal, the photons in the light can excite (transfer energy to) electrons in the metal and, sometimes, eject them from the surface into the free space above. The energy of the ejected electron can be calculated by measuring the minimum voltage $V$ that stops the electron moving.
@@ -56,7 +58,7 @@ For an atom at $i=j=k=0$, the Madelung constant $M$ can be approximated by using
 
 $V_\mathrm{total} = \sum_{i,j,k} V(i,j,k) = \frac{e}{4\pi\epsilon_0a}M$
 
-$V(i,j,k) = \pm\\frac{e}{4\pi\epsilon_0r}$
+$V(i,j,k) = \pm\frac{e}{4\pi\epsilon_0r}$
 
 where $r$ is the distance from the origin to the atom at position $(i,j,k)$ and $a$ is the atom spacing. The summation runs from $i,j,k=-L$ to $i,j,k=L$ but not including $i,j,k=0$ (otherwise the expression would "blow up").
 
