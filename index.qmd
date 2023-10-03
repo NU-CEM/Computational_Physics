@@ -2,6 +2,8 @@
 title: "Computational Physics"
 ---
 
+![Figure: A simulation of vinegar-oil separation after mixing. This uses the Cahn-Hilliard partial differential equation to model the diffusive dynamics of a two-phase system.](./images/animation_segregation.gif){fig-align="center"}
+
 Computing has become central to virtually all research and development in academia and industry, 
 and with the advent of Machine Learning and High-Performance Computing this dominance is set to continue.
 
