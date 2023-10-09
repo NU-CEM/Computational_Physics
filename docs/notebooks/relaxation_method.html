@@ -385,6 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#to-solve-this-set-of-equations-we-use-the-relaxation-method" id="toc-to-solve-this-set-of-equations-we-use-the-relaxation-method" class="nav-link" data-scroll-target="#to-solve-this-set-of-equations-we-use-the-relaxation-method">To solve this set of equations we use the relaxation method</a></li>
   <li><a href="#the-relaxation-method-is-limited-by-the-accuracy-of-the-finite-difference-method" id="toc-the-relaxation-method-is-limited-by-the-accuracy-of-the-finite-difference-method" class="nav-link" data-scroll-target="#the-relaxation-method-is-limited-by-the-accuracy-of-the-finite-difference-method">The relaxation method is limited by the accuracy of the finite difference method</a></li>
   <li><a href="#the-relaxation-methods-can-be-applied-using-the-python-skills-we-have-developed" id="toc-the-relaxation-methods-can-be-applied-using-the-python-skills-we-have-developed" class="nav-link" data-scroll-target="#the-relaxation-methods-can-be-applied-using-the-python-skills-we-have-developed">The relaxation methods can be applied using the Python skills we have developed</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test your understanding</a></li>
   </ul>
 </nav>
     </div>
@@ -580,6 +581,80 @@ Keypoints
 <li>The relaxation method is limited by the accuracy of the finite difference method</li>
 <li>The relaxation and finite difference methods can be applied using the Python skills we have developed</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="test-your-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-understanding">Test your understanding</h3>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Boundary conditions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In this tutorial we implement a finite difference method to solve Laplace’s equation. We use fixed boundary conditions, which are an example of <a href="https://math.libretexts.org/Bookshelves/Differential_Equations/Book%3A_Partial_Differential_Equations_(Walet)/03%3A_Boundary_and_Initial_Conditions/3.02%3A_Explicit_Boundary_Conditions">Dirichlet-type boundary conditions</a>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> finite_difference(phi):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(grid_height): <span class="co"># for each grid point</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(grid_width):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span> <span class="kw">or</span> i<span class="op">==</span>grid_height<span class="op">-</span><span class="dv">1</span> <span class="kw">or</span> j<span class="op">==</span><span class="dv">0</span> <span class="kw">or</span> j<span class="op">==</span>grid_width<span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                phi_prime[i,j] <span class="op">=</span> phi[i,j] <span class="co"># if at boundary, keep fixed</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>: <span class="co"># otherwise apply finite difference</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                phi_prime[i,j] <span class="op">=</span> (phi[i<span class="op">+</span><span class="dv">1</span>,j]<span class="op">+</span>phi[i<span class="op">-</span><span class="dv">1</span>,j]<span class="op">+</span>phi[i,j<span class="op">+</span><span class="dv">1</span>]<span class="op">+</span>phi[i,j<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="dv">4</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> phi_prime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Another form of boundary condition is a Periodic Boundary Condition. PBCs are often chosen for approximating a large (infinite) system by using a small part called a unit cell, and are most famously used for modelling periodic crystals in solid state physics. Mathematically, PBCs can be expressed for <span class="math inline">\(f(x,y)\)</span> on a two dimensional <span class="math inline">\(N \times N\)</span> grid as:</p>
+<p><span class="math display">\[\begin{equation}
+f[N+1,y] = f[0,y],
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+f[x,N+1] = f[x,0],
+\end{equation}\]</span></p>
+<p>Write a function which calculates <code>phi_prime</code> using a finite difference method with periodic boundary conditions.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> finite_difference(phi):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N): <span class="co"># for each grid point</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(N):</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>            i1 <span class="op">=</span> i<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>            j1 <span class="op">=</span> j<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            i2 <span class="op">=</span> i<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>            j2 <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="op">==</span> N<span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>                i1 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>                i2 <span class="op">==</span> N<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> j <span class="op">==</span> N<span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>                j1 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> j <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>                j2 <span class="op">==</span> N<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>            phi_prime[i,j] <span class="op">=</span> (phi[i1,j]<span class="op">+</span>phi[i2,j]<span class="op">+</span>phi[i,j1]<span class="op">+</span>phi[i,j2]) <span class="op">/</span> <span class="dv">4</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> phi_prime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

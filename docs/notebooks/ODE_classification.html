@@ -355,6 +355,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#linear-equations-do-not-contain-higher-powers-of-either-the-dependent-variable-or-its-differentials" id="toc-linear-equations-do-not-contain-higher-powers-of-either-the-dependent-variable-or-its-differentials" class="nav-link" data-scroll-target="#linear-equations-do-not-contain-higher-powers-of-either-the-dependent-variable-or-its-differentials">Linear equations do not contain higher powers of either the dependent variable or its differentials</a></li>
   <li><a href="#homogeneous-equations-do-not-contain-any-non-differential-terms" id="toc-homogeneous-equations-do-not-contain-any-non-differential-terms" class="nav-link" data-scroll-target="#homogeneous-equations-do-not-contain-any-non-differential-terms">Homogeneous equations do not contain any non-differential terms</a></li>
   <li><a href="#separable-equations-can-be-written-as-a-product-of-two-functions-of-different-variables" id="toc-separable-equations-can-be-written-as-a-product-of-two-functions-of-different-variables" class="nav-link" data-scroll-target="#separable-equations-can-be-written-as-a-product-of-two-functions-of-different-variables">Separable equations can be written as a product of two functions of different variables</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test your understanding</a></li>
   </ul>
 </nav>
     </div>
@@ -536,6 +537,65 @@ Keypoints
 <li>Linear equations do not contain higher powers of either the dependent variable or its differentials</li>
 <li>Homogeneous equations do not contain any non-differential terms</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="test-your-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-understanding">Test your understanding</h3>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Describing equations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Describe the following differential equations. Are they - - an ODE or PDE? - first order or higher? - linear or non-linear? - heterogeneous or homogeneous? - separable or non-separable?</p>
+<ol type="a">
+<li>The oscillation of a non-linear driven pendulum,</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = -\frac{g}{l}\sin(\theta) + C\cos(\theta)\sin(\sigma t),
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(l\)</span> and <span class="math inline">\(\sigma\)</span> are constant parameters and <span class="math inline">\(g\)</span> is the acceleration due to gravity.</p>
+<ol start="2" type="a">
+<li>The one dimensional diffusion equation,</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial T}{\partial t} = D\frac{\partial ^2 T}{\partial x^2}.
+\end{equation}\]</span></p>
+<ol start="3" type="a">
+<li>The motion of mass <span class="math inline">\(m_1\)</span> in the gravitational field of mass <span class="math inline">\(m_2\)</span> and with a viscous friction term,</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+m_1 \frac{\mathrm{d}^2 \mathbf{r}}{\mathrm{d} t^2} = -\frac{G m_1 m_2}{r^2} \mathbf{r} - cv^2\mathbf{v},
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(v\)</span> is the velocity.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>This equation is a second order, linear, heterogeneous, non-separable ODE.</p></li>
+<li><p>This equation is a second order, linear, homogeneous PDE. A linear, homogeneous PDE is separable and can be solved using the <a href="https://tutorial.math.lamar.edu/classes/de/SeparationofVariables.aspx">Separation of Variables</a>.</p></li>
+<li><p>This equation is a second order, non-linear, heterogeneous, non-separable ODE.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
