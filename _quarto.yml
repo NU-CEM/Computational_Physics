@@ -21,7 +21,7 @@ website:
           - markdown/recap_questions.qmd
       - section: "Getting Results"
         contents:
-          - section: "Integration"
+          - section: "Integrals"
             contents:
               - href: markdown/integration_introduction.qmd
                 text: Introduction
@@ -29,6 +29,37 @@ website:
               - notebooks/monte_carlo.ipynb
               - href: markdown/integration_questions.qmd
                 text: Questions
+          - section: "Derivatives"
+            contents:
+              - href: markdown/differentiation_introduction.qmd
+                text: Introduction
+              - notebooks/finite_difference.ipynb
+              - notebooks/error_accuracy_speed.ipynb
+              - href: markdown/differentiation_questions.qmd
+                text: Questions
+          - section: "Ordinary Differential Equations"
+            contents:
+             - href: markdown/ODE_introduction.qmd
+               text: Introduction
+             - notebooks/ODE_classification.ipynb
+             - notebooks/ODE_boundary_and_initial.ipynb
+             - notebooks/euler_method.ipynb
+             - notebooks/runge_kutta_method.ipynb
+             - notebooks/multivariable_equations.ipynb
+             - href: markdown/ODE_questions.qmd
+               text: Questions
+          - section: "Partial Differential Equations"
+            contents:
+             - href: markdown/PDE_introduction.qmd
+               text: Introduction
+             - notebooks/PDE_classification.ipynb
+             - notebooks/PDE_boundary_and_initial.ipynb
+             - notebooks/relaxation_method.ipynb
+             - notebooks/FTCS_method.ipynb
+             - href: markdown/PDE_questions.qmd
+               text: Questions
+
+
 
 format:
   html:

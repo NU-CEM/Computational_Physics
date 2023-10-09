@@ -1,0 +1,21 @@
+---
+title: "Differentiation questions"
+---
+
+## Exploring errors
+
+a) Write a program that defines a function $f(x)$ returning the value $x(x-1)$, then uses the backwards difference method to calculate the numerical derivative of $f(x)$ at the point $x=1$, with $h=10^{-2}$.
+
+b) Calculate the exact value of the derivative and compare this to the answer your program gives. The two will not agree perfectly - why not?
+
+c) Repeat the calculation for $h=10^{-2},10^{-4},10^{-6},10^{-8},10^{-10},10^{-12},10^{-14}$. What do you observe about the accuracy of the calculation? Why does it behave in this way?
+
+## The method of finite differences for second order derivatives
+
+In the tutorial we give an expression for calculating second order derivatives using the finite difference method:
+
+\begin{equation}
+\frac{\mathrm{d} ^2f}{\mathrm{d} x^2} \simeq \frac{f(x+h)-2f(x)+f(x-h)}{h^2}.
+\end{equation}
+
+Using the fact that a second derivative is, by definition, a derivative of a derivative, and by applying the central difference method multiple times, derive this expression.

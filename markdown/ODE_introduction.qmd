@@ -1,0 +1,26 @@
+---
+title: "Introduction to Ordinary Differential Equations"
+---
+
+> "Since Newton, mankind has come to realise that  the  laws of  physics are always expressed in the language of differential equations" -- Steven Strogatz
+
+In this section of the course we will learn how to solve ordinary differential equations. These are of vital importance to a physicist as they are at the base of classical and celestial mechanics via Newton's equations. They are also used to model electrical circuits and radioactive decay, amongst other systems.
+ 
+Broadly speaking, there are three ways to solve a differential equation: analytically, numerically (with a pre-existing function) or numerically (with a home-made function). Numerical approaches offer more flexibility but with the caveat that they are approximate and must be converged. 
+
+In this lesson we will use numerical approaches to solve ODE's, with a strong focus on home-made numerical functions (rather than pre-made functions imported from a library). As such we will achieve a greater understanding of the underlying mathematics and approximations used - and it's a great chance to practice our Python skills.
+
+### Before you begin
+
+- Check that Python and Jupyter Notebook are installed
+- Launch a Jupyter notebook 
+
+Please see the [Setup](../setup.qmd) page for more details.
+
+### External resources
+
+📖 Textbook: Mark Newman's Computational Physics sections 8.1, 8.2, 8.3, 8.4
+
+{{< video https://youtu.be/p_di4Zn4wz4  width="700" height="450" >}}
+
+{{< video https://youtu.be/3d6DsjIBzJ4 width="700" height="450" >}}

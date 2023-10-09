@@ -44,7 +44,6 @@ b) Increase the number of random points until you reach an estimate that is exac
 
 c) By considering how many points would need to be sampled, estimate the length of time it would take to reach the same level of accuracy using a Riemann slice type method.
 
-
 ## The Stefan-Boltzmann constant re-visited
 
 In the Riemann sums tutorial question we use rectangular slices to estimate the Stefan-Boltzmann constant to three significant figures. The trapezoidal rule is a neat extension to rectangular slices, where the value at the start and end of each segment is considered. It can be expressed as
