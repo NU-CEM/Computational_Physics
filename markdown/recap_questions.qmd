@@ -14,6 +14,8 @@ a) Write a piece of code which calculates the altitude $h$ (in metres) for a giv
 
 b) Use this code to calculate the altitude of satellites that orbit the Earth once a day (a "geosynchronous" orbit) and once every 45 minutes. What can you conclude from this final calculation?
 
+*Hint: The earths rotation is measured in sidereal time*
+
 # The emission lines of hydrogen
 
 ![](../images/hydrogen_emission.png)
