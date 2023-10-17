@@ -470,7 +470,7 @@ Objectives
 \frac{\mathrm{d} f}{\mathrm{d} x} \simeq \frac{f(x+\frac{h}{h2})-f(x-\frac{h}{2})}{h}.
 \end{equation}\]</span></p>
 <p>Let’s start with a simple example - let’s use the forward difference method to calculate the derivative of <span class="math inline">\(x^2\)</span> at <span class="math inline">\(x=5\)</span> with <span class="math inline">\(h=0.01\)</span>.</p>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> x_squared(x):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -478,9 +478,9 @@ Objectives
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_x(x<span class="op">+</span>h) <span class="op">-</span> f_x(x)) <span class="op">/</span> h</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="26">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>forward_difference(x_squared,<span class="dv">5</span>, <span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>20.019999999999527</code></pre>
 </div>
 </div>
@@ -491,14 +491,14 @@ Objectives
 <p>Note that in the next tutorial we will see that it is also possible to make <span class="math inline">\(h\)</span> too small!</p>
 <p>As we can see from the example in the image at the top of the page, the central difference is (in general) more accurate than the forward or backward differences. <mark> In fact, the error is order <span class="math inline">\(h\)</span> for the forwards and backwards methods, and order <span class="math inline">\(h^2\)</span> for the central difference. </mark></p>
 <p>Let’s test this idea using our simple <span class="math inline">\(2x^2\)</span> example that we started above:</p>
-<div class="cell" data-execution_count="27">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>exact_answer <span class="op">=</span> <span class="dv">20</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_x2_error(h):</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    error <span class="op">=</span> exact_answer <span class="op">-</span> forward_difference(x_squared,<span class="dv">5</span>, h)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">"error for h=</span><span class="sc">{}</span><span class="st"> is </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(h,<span class="bu">round</span>(error,<span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>calculate_x2_error(<span class="fl">0.01</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>calculate_x2_error(<span class="fl">0.005</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>calculate_x2_error(<span class="fl">0.0025</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -517,11 +517,16 @@ error for h=0.0025 is -0.005</code></pre>
 \frac{\mathrm{d}^2f}{\mathrm{d} x^2} \simeq \frac{f(x+h)-2f(x)+f(x-h)}{h^2}.
 \end{equation}\]</span></p>
 <p>Let’s test this out using the <span class="math inline">\(2x^2\)</span> example that we started above:</p>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> second_order_forward_difference(f_x, x, h):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_x(x<span class="op">+</span>h) <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>f_x(x) <span class="op">+</span> f_x(x<span class="op">-</span>h)) <span class="op">/</span> (h<span class="op">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>second_order_forward_difference(x_squared, 5, 0.01)</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>second_order_forward_difference(x_squared, <span class="dv">5</span>, <span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>3.9999999999906777</code></pre>
+</div>
+</div>
 <p>The second derivative of <span class="math inline">\(2x^2\)</span> is 4, so the implementation appears correct.</p>
 </section>
 <section id="partial-derivatives-can-be-calculated-using-finite-differences" class="level3">
@@ -542,14 +547,14 @@ error for h=0.0025 is -0.005</code></pre>
 <p>Let’s consider another example, where we calculate the <span class="math inline">\(x\)</span>-component of a force <span class="math inline">\(F\)</span> in a potential energy <span class="math inline">\(U = x^2+y^2\)</span>, at <span class="math inline">\(x=5,y=10\)</span>. We know that the force and potential energy are calculated as follows:</p>
 <p><span class="math display">\[F_x = \frac{\partial U}{\partial x}\]</span></p>
 <div class="cell" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> potential_energy(x,y):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> partial_dfdx(f_x, x, y, h):</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_x(x<span class="op">+</span>(h<span class="op">/</span><span class="dv">2</span>),y) <span class="op">-</span> f_x(x<span class="op">-</span>(h<span class="op">/</span><span class="dv">2</span>),y)) <span class="op">/</span> h</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> potential_energy(x,y):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> partial_dfdx(f_x, x, y, h):</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_x(x<span class="op">+</span>(h<span class="op">/</span><span class="dv">2</span>),y) <span class="op">-</span> f_x(x<span class="op">-</span>(h<span class="op">/</span><span class="dv">2</span>),y)) <span class="op">/</span> h</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>partial_dfdx(potential_energy, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>partial_dfdx(potential_energy, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">0.01</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>10.000000000000853</code></pre>
 </div>
@@ -564,10 +569,7 @@ error for h=0.0025 is -0.005</code></pre>
 \nabla^2\phi = \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2}.
 \end{equation}\]</span></p>
 <p>With equivalent expressions for a single dimension or extension to higher dimensions.</p>
-<p>We can think of the laplacian as encoding an average rate of change. To develop an intuition for how the laplacian can be interpreted physically, we need to understand two related operators - div and curl. We will not explore these operators further in this lesson, but a related video is below:</p>
-<blockquote class="blockquote">
-<p>youtube: https://youtu.be/EW08rD-GFh0</p>
-</blockquote>
+<p>We can think of the laplacian as encoding an average rate of change. To develop an intuition for how the laplacian can be interpreted physically, we need to understand two related operators - div and curl. We will not explore these operators further in this lesson, but a related video is listed under external resources.</p>
 </section>
 <section id="the-laplacian-can-be-calculated-using-finite-differences" class="level3">
 <h3 class="anchored" data-anchor-id="the-laplacian-can-be-calculated-using-finite-differences">The Laplacian can be calculated using finite differences</h3>
@@ -633,15 +635,15 @@ Show answer
 <ol type="a">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrand(x,y):</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">6</span><span class="op">*</span>math.cos(x) <span class="op">+</span> <span class="dv">7</span><span class="op">*</span>math.sin(y)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> laplacian(f_xy, x, y, h):</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_xy(x<span class="op">+</span>h,y) <span class="op">+</span> f_xy(x<span class="op">-</span>h,y) <span class="op">+</span> f_xy(x,y<span class="op">+</span>h) <span class="op">+</span> f_xy(x,y<span class="op">-</span>h) <span class="op">-</span> <span class="dv">4</span><span class="op">*</span>(f_xy(x,y))) <span class="op">/</span> (h<span class="op">**</span><span class="dv">2</span>)    </span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>laplacian(integrand, math.pi, math.pi, <span class="fl">1E-2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrand(x,y):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">6</span><span class="op">*</span>math.cos(x) <span class="op">+</span> <span class="dv">7</span><span class="op">*</span>math.sin(y)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> laplacian(f_xy, x, y, h):</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f_xy(x<span class="op">+</span>h,y) <span class="op">+</span> f_xy(x<span class="op">-</span>h,y) <span class="op">+</span> f_xy(x,y<span class="op">+</span>h) <span class="op">+</span> f_xy(x,y<span class="op">-</span>h) <span class="op">-</span> <span class="dv">4</span><span class="op">*</span>(f_xy(x,y))) <span class="op">/</span> (h<span class="op">**</span><span class="dv">2</span>)    </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>laplacian(integrand, math.pi, math.pi, <span class="fl">1E-2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre class="output"><code>5.999950000159515</code></pre>
 <ol start="2" type="a">
 <li>This is within 1e-5 to the exact answer of 6.</li>
