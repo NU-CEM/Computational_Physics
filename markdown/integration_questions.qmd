@@ -12,7 +12,7 @@ The quantum theory of modern physics was born with Planck's law. Up until this p
 
 $$W = \sigma T^4$$
 
-where $\sigma$ is the Stefan-Boltzmann constant.
+where $\sigma$ is the Stefan-Boltzmann constant and $W$ is the total energy radiated per unit surface area per unit time.
 
 Einstein later postulated that the discrete quanta are real, physical particles (photons) and used this to explain the photoelectric effect. This research resulted in Einstein receiving the Nobel prize for physics in 1921.
 
