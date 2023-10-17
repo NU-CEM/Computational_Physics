@@ -19,5 +19,5 @@ Please see the [Setup](../setup.qmd) page for more details.
 
 📖 Textbook: Mark Newman's Computational Physics sections 5.1-5.4 and 10.2
 
-{{< video https://youtu.be/EW08rD-GFh0  width="700" height="450" >}}
+
 
