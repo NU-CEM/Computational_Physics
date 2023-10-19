@@ -26,7 +26,15 @@ We will aim to publish all course materials on this website **however** a large 
 
 Blackboard collaborate is widely used at Northumbria University for teaching. However in the computational sciences (and in software engineering) Blackboard collaborate *is not* widely used. The aim here is to teach and learn using the tools that are already used in research and industry - hence building the course resources around the [Github](https://github.com) service. Also, the code can be nicely formatted using Markdown/html (rather than blackboard), making it easier for students to read and understand.
 
-The source code for this website can be found in the [course Github repository](https://github.com/nu-cem/Computational_Physics).
-If you spot any mistakes or would like to make a suggestions for improving the course please [raise an issue on Github](https://github.com/nu-cem/Computational_Physics/issues).
+Blackboard collaborate will be used for posting assessments, monitoring attendance and for course announcements.
 
-Blackboard collaborate will be used for posting assessments and for course announcements.
+### Can I contribute to the website?
+
+Why yes!
+
+There are two ways you can suggest improvements to the website or highlight/fix mistakes in the text:
+
+1) If you cannot fix it yourself, visit the [Github repository for this course](https://github.com/NU-CEM/Computational_Physics/) and [raise an issue](https://github.com/NU-CEM/Computational_Physics/issues).  
+
+2) If you can fit it yourself, you can visit the [Github repository for this course](https://github.com/NU-CEM/Computational_Physics/) and issue a pull request. This is a little bit more involved but has one significant advantage: once your pull request is merged into the website, you will be an official contributor to an open source project 🎈. There is a short video below outlining the steps required to fix a typo on one of the website pages and raise a pull request.
+
