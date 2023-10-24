@@ -419,13 +419,13 @@ Objectives
 <section id="a-differential-equation-is-an-equation-that-relates-one-or-more-functions-and-their-derivatives" class="level3">
 <h3 class="anchored" data-anchor-id="a-differential-equation-is-an-equation-that-relates-one-or-more-functions-and-their-derivatives">A differential equation is an equation that relates one or more functions and their derivatives</h3>
 <ul>
-<li>The functions usually represent physical quantities (e.g.&nbsp;<span class="math inline">\(\mathbf{F}\)</span>))</li>
-<li>The derivative represents a rate of change (e.g.&nbsp;acceleration)</li>
+<li>The functions usually represent physical quantities (e.g.&nbsp;force))</li>
+<li>The derivative represents a rate of change (e.g.&nbsp;acceleration, the rate of change in velocity)</li>
 <li>The differential equation represents the relationship between the two.</li>
-<li>For example, Newton’s second law for <span class="math inline">\(n\)</span> particles of mass <span class="math inline">\(m\)</span>:</li>
+<li>For example, Newton’s second law for a particle of mass <span class="math inline">\(m\)</span>:</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
-\mathbf{F}(t,\mathbf{x},\mathbf{v}) = m\frac{d\mathbf{v}}{dt}
+F(t,x,v) = m\frac{dv}{dt}
 \end{equation}\]</span></p>
 </section>
 <section id="an-independent-variable-is-a-quantity-that-varies-independently" class="level3">
@@ -435,7 +435,7 @@ Objectives
 <li>A <mark> dependent variable</mark> depends on the independent variable</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
-\mathbf{F}(t,\mathbf{x},\mathbf{v}) = m\frac{d\mathbf{v}}{dt}
+F(t,x,v) = m\frac{dv}{dt}
 \end{equation}\]</span></p>
 <ul>
 <li><span class="math inline">\(t\)</span> is an <mark>independent</mark> variable</li>
@@ -502,7 +502,7 @@ Warning
 <section id="linear-equations-do-not-contain-higher-powers-of-either-the-dependent-variable-or-its-differentials" class="level3">
 <h3 class="anchored" data-anchor-id="linear-equations-do-not-contain-higher-powers-of-either-the-dependent-variable-or-its-differentials">Linear equations do not contain higher powers of either the dependent variable or its differentials</h3>
 <p>For example:</p>
-<p><span class="math inline">\(\frac{d^3 x}{d t^3} = at\)</span> and $ = $ are <mark>linear</mark>.</p>
+<p><span class="math inline">\(\frac{d^3 x}{d t^3} = at\)</span> and <span class="math inline">\(\frac{\partial x}{\partial t} = \frac{\partial x}{\partial y}\)</span> are <mark>linear</mark>.</p>
 <p><span class="math inline">\((\frac{d x}{d t})^3 = at\)</span> and <span class="math inline">\(\frac{d^3 x}{d t^3} = x^2\)</span> are <mark>non-linear</mark>.</p>
 <p>Non-linear equations can be particularly nasty to solve analytically, and so are often tackled numerically.</p>
 </section>
@@ -568,13 +568,6 @@ Describing equations
 <p><span class="math display">\[\begin{equation}
 \frac{\partial T}{\partial t} = D\frac{\partial ^2 T}{\partial x^2}.
 \end{equation}\]</span></p>
-<ol start="3" type="a">
-<li>The motion of mass <span class="math inline">\(m_1\)</span> in the gravitational field of mass <span class="math inline">\(m_2\)</span> and with a viscous friction term,</li>
-</ol>
-<p><span class="math display">\[\begin{equation}
-m_1 \frac{\mathrm{d}^2 \mathbf{r}}{\mathrm{d} t^2} = -\frac{G m_1 m_2}{r^2} \mathbf{r} - cv^2\mathbf{v},
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(v\)</span> is the velocity.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -590,7 +583,6 @@ Show answers
 <ol type="a">
 <li><p>This equation is a second order, linear, heterogeneous, non-separable ODE.</p></li>
 <li><p>This equation is a second order, linear, homogeneous PDE. A linear, homogeneous PDE is separable and can be solved using the <a href="https://tutorial.math.lamar.edu/classes/de/SeparationofVariables.aspx">Separation of Variables</a>.</p></li>
-<li><p>This equation is a second order, non-linear, heterogeneous, non-separable ODE.</p></li>
 </ol>
 </div>
 </div>
