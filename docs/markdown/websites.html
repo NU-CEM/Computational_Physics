@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Physics - Python recap</title>
+<title>Computational Physics - Build-your-own website with Github</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/recap.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../markdown/recap.html">Python recap</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/out_there_introduction.html">Getting It Out There</a></li><li class="breadcrumb-item"><a href="../markdown/websites.html">Build-your-own Website</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link active">
+  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python recap</span></a>
   </div>
 </li>
@@ -357,7 +357,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/websites.html" class="sidebar-item-text sidebar-link">
+  <a href="../markdown/websites.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Build-your-own Website</span></a>
   </div>
 </li>
@@ -387,14 +387,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#github-pages-takes-html-files-from-a-github-repository-and-publishes-a-website." id="toc-github-pages-takes-html-files-from-a-github-repository-and-publishes-a-website." class="nav-link active" data-scroll-target="#github-pages-takes-html-files-from-a-github-repository-and-publishes-a-website.">Github pages takes HTML files from a Github repository and publishes a website.</a></li>
+  <li><a href="#we-can-create-a-simple-website-in-three-short-steps" id="toc-we-can-create-a-simple-website-in-three-short-steps" class="nav-link" data-scroll-target="#we-can-create-a-simple-website-in-three-short-steps">We can create a simple website in three short steps</a></li>
+  <li><a href="#github-pages-can-be-combined-with-a-variety-of-static-site-generators-to-create-a-customised-website." id="toc-github-pages-can-be-combined-with-a-variety-of-static-site-generators-to-create-a-customised-website." class="nav-link" data-scroll-target="#github-pages-can-be-combined-with-a-variety-of-static-site-generators-to-create-a-customised-website.">Github pages can be combined with a variety of static site generators to create a customised website.</a></li>
+  <li><a href="#a-single-page-project-site-is-created-using-the-readme.md-file-on-the-gh-pages-branch." id="toc-a-single-page-project-site-is-created-using-the-readme.md-file-on-the-gh-pages-branch." class="nav-link" data-scroll-target="#a-single-page-project-site-is-created-using-the-readme.md-file-on-the-gh-pages-branch.">A single page project site is created using the <code>README.md</code> file on the <code>gh-pages</code> branch.</a></li>
+  <li><a href="#github-pages-combined-with-jekyll-front-matter-can-be-used-to-create-a-multipage-sites." id="toc-github-pages-combined-with-jekyll-front-matter-can-be-used-to-create-a-multipage-sites." class="nav-link" data-scroll-target="#github-pages-combined-with-jekyll-front-matter-can-be-used-to-create-a-multipage-sites.">Github pages combined with Jekyll front matter can be used to create a multipage sites.</a></li>
+  <li><a href="#github-has-a-range-of-jekyll-themes-to-choose-from." id="toc-github-has-a-range-of-jekyll-themes-to-choose-from." class="nav-link" data-scroll-target="#github-has-a-range-of-jekyll-themes-to-choose-from.">Github has a range of Jekyll themes to choose from.</a></li>
+  <li><a href="#to-access-a-wider-range-of-customisation-options-you-can-fork-a-jekyll-template-and-edit-the-_config.yml-file." id="toc-to-access-a-wider-range-of-customisation-options-you-can-fork-a-jekyll-template-and-edit-the-_config.yml-file." class="nav-link" data-scroll-target="#to-access-a-wider-range-of-customisation-options-you-can-fork-a-jekyll-template-and-edit-the-_config.yml-file.">To access a wider range of customisation options you can fork a Jekyll template and edit the <code>_config.yml</code> file.</a></li>
+  <li><a href="#for-more-flexibility-you-can-combine-other-static-site-generators-can-be-combined-with-github-actions-." id="toc-for-more-flexibility-you-can-combine-other-static-site-generators-can-be-combined-with-github-actions-." class="nav-link" data-scroll-target="#for-more-flexibility-you-can-combine-other-static-site-generators-can-be-combined-with-github-actions-.">For more flexibility you can combine other static site generators can be combined with Github actions .</a></li>
+  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task">TASK</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Python recap</h1>
+<h1 class="title">Build-your-own website with Github</h1>
 </div>
 
 
@@ -409,10 +423,225 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A pre-requisite for this course is a basic understanding of Python. If you need to recap on the basics, you can use the <a href="https://lucydot.github.io/python_novice/">Python for Physicists website</a> - this covers all of the pre-requisite knowledge needed.</p>
-<p>To self-assess your level of understanding, we recommend using <a href="https://lucydot.github.io/Python_Northumbria_2023">ChooChoo the Checklist tool</a>.</p>
+<p>Questions:</p>
+<ul>
+<li>How can I create a project website?</li>
+</ul>
+<p>Objectives:</p>
+<ul>
+<li>Differentiate between git, Github and Github pages</li>
+<li>Use Github pages and html to create a very simple website</li>
+<li>Use Github pages and markdown to create a very simple website</li>
+<li>Customise the website using the <code>_config.yml</code> file</li>
+<li>Use Github pages, markdown and Jekyll to create a multipage website</li>
+</ul>
+<p>Keypoints:</p>
+<ul>
+<li>Github pages is a static site hosting service that takes HTML files from a Github repository and publishes a website.</li>
+<li>We can create a simple website in three short steps.</li>
+<li>Github pages can be combined with a variety of static site generators to create a customised website.</li>
+<li>A single page project site can be created using an <code>README.md</code> file on the <code>gh-pages</code> branch.</li>
+<li>Github pages combined with Jekyll front matter can be used to create quick multipage sites.</li>
+<li>Github has a range of Jekyll themes to choose from.</li>
+<li>To access a wider range of themes and customisation options you can add a <code>_config.yml</code> file.</li>
+<li>Other static site generators can be combined with Github actions for more flexibility.</li>
+</ul>
+<section id="github-pages-takes-html-files-from-a-github-repository-and-publishes-a-website." class="level3">
+<h3 class="anchored" data-anchor-id="github-pages-takes-html-files-from-a-github-repository-and-publishes-a-website.">Github pages takes HTML files from a Github repository and publishes a website.</h3>
+<ul>
+<li>First we should differentiate between three similar sounding tools:
+<ul>
+<li><a href="https://git-scm.com/">Git</a> is an open-source version control system that can be used online or locally.</li>
+<li><a href="https://github.com/">Github</a> is a website (owned by Microsoft) that is built on top of git. It can be used to store and share files in project repositories.</li>
+<li><a href="https://pages.github.com/">Github pages</a> is a service provided by Github. Github pages takes HTML from a repository and publishes it as a website.</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: Github is not the only option for hosting your code. Other services include <a href="https://about.gitlab.com/">Gitlab</a> (which is an open source project) and <a href="https://bitbucket.org/product">Bitbucket</a>.</p>
+</blockquote>
+</section>
+<section id="we-can-create-a-simple-website-in-three-short-steps" class="level3">
+<h3 class="anchored" data-anchor-id="we-can-create-a-simple-website-in-three-short-steps">We can create a simple website in three short steps</h3>
+<ul>
+<li><p>To see the most simple example of how Github pages works we can create 1) create a repository 2) create a <code>gh-pages</code> branch and 3) add a html file.</p></li>
+<li><p>Step 1: Create a repository</p>
+<ul>
+<li>Register for a Github account (if you do not already have one) and login</li>
+<li>Create a new repository by clicking the <code>plus</code> sign at the top-right hand corner</li>
+<li>Give your repository a name e.g.&nbsp;<code>website-example</code></li>
+<li>Give your repository a description e.g.&nbsp;<code>A simple example of a website generated using gh-pages</code></li>
+<li>Select <code>Add a README file</code></li>
+<li>Select <code>Choose a license</code> and select a license</li>
+<li>Click <code>Create repository</code></li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>Important: You don’t need to select a license at this stage but it’s recommended that you do. The MIT License is a popular choice as it is simple and permissive (people do almost anything they want with your project). If you are not clear which license to use you can visit <a href="https://choosealicense.com/">https://choosealicense.com/</a>.</p>
+</blockquote>
+<ul>
+<li>Step 2: Create a gh-pages branch
+<ul>
+<li>Click <code>main</code> towards the top-left hand corner</li>
+<li>Type <code>gh-pages</code> into the text box (Find or create a branch)</li>
+<li>Select `Create branch: gh-pages from ‘main’</li>
+</ul></li>
+</ul>
+<p>A branch in Git is similar to the branch of a tree. A tree branch is attached to the main part of the tree. While branches can generate and fall off, the main central part of the tree continues. Similarly, a branch in Git is a way of developing new features or fixing bugs without affecting the main part of the project (the <code>main</code> branch). The main branch is created when we create the git repository.</p>
+<blockquote class="blockquote">
+<p>Important: Github pages will automatically publish any html on the <code>gh-pages</code> branch only.</p>
+</blockquote>
+<ul>
+<li>Step 3:
+<ul>
+<li>Click <code>Add file</code> (make sure you are on the gh-pages branch)</li>
+<li>Click <code>Create new file</code></li>
+<li>Name the file <code>Hello-world.html</code></li>
+<li>Paste the following code</li>
+</ul></li>
+</ul>
+<pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Hello World!&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Soooo nice to meet you.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+<ul>
+<li>Click <code>Commit new file</code></li>
+</ul>
+<p>You can access your project webpages using the address format <code>username.github.io/repository-name/filename.html</code>. If you have followed the suggested naming in this example you can access your Hello-world webpage at <code>https://username.github.io/website-example/Hello-world.html</code></p>
+</section>
+<section id="github-pages-can-be-combined-with-a-variety-of-static-site-generators-to-create-a-customised-website." class="level3">
+<h3 class="anchored" data-anchor-id="github-pages-can-be-combined-with-a-variety-of-static-site-generators-to-create-a-customised-website.">Github pages can be combined with a variety of static site generators to create a customised website.</h3>
+<ul>
+<li>It would take a lot of time to write our website using html (unless we want a really, really simple website)</li>
+<li>Instead there are several static site generators which will take plain text files (formatted using a markup language such as <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> or <a href="https://www.writethedocs.org/guide/writing/reStructuredText/">reStructuredText</a>) and convert these into html.</li>
+<li>Examples of static site generators include:
+<ul>
+<li><a href="https://jekyllrb.com/">Jekyll</a>, which is used by the Software Carpentry organisation: https://swcarpentry.github.io/python-novice-inflammation/</li>
+<li><a href="https://www.mkdocs.org/">Mkdocs</a>, which is used to create documentation sites, for example this one for the University of Northumbria research computing community (developed by an undergraduate student in the CIS department): https://rsc-northumbria.github.io/oswald-docs/</li>
+<li><a href="https://gohugo.io/">hugo</a> which can be used for developing personal or professional webpages: https://lucydot.github.io</li>
+</ul></li>
+<li>Each type of static site generator comes with a range of templates to use for customising your website.</li>
+<li>Any static site generator can be combined with Github pages to create a website. We will use Jekyll as this has extra integration support from Github pages.</li>
+</ul>
+</section>
+<section id="a-single-page-project-site-is-created-using-the-readme.md-file-on-the-gh-pages-branch." class="level3">
+<h3 class="anchored" data-anchor-id="a-single-page-project-site-is-created-using-the-readme.md-file-on-the-gh-pages-branch.">A single page project site is created using the <code>README.md</code> file on the <code>gh-pages</code> branch.</h3>
+<ul>
+<li>In fact, Github has already used the Jekyll static site generator behind the scenes to convert your repository <code>README.md</code> file to html. You can access this at <code>https://username.github.io/website-example/</code>.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: Github will automatically convert a file named <code>README.md</code> on the gh-pages branch only if an <code>index.html</code> does not exist.</p>
+</blockquote>
+<ul>
+<li>We can edit and commit changes to the <code>README.md</code> and our webpage will be updated.
+<ul>
+<li>Click on the pencil icon on your repository landing page</li>
+<li>Edit the file using markdown, e.g.&nbsp;<code>The website can be accessed [here](https://lucydot.github.io/website-example/Hello-world.html).</code></li>
+<li>Under <code>Commit changes</code> write a commit message title e.g.&nbsp;<code>Include a link the website</code>.</li>
+<li>Click on <code>Commit changes</code> to save (version control) the changes made.</li>
+<li>The changes should be reflected on the webpage: https://username.github.io/website-example/</li>
+</ul></li>
+</ul>
+</section>
+<section id="github-pages-combined-with-jekyll-front-matter-can-be-used-to-create-a-multipage-sites." class="level3">
+<h3 class="anchored" data-anchor-id="github-pages-combined-with-jekyll-front-matter-can-be-used-to-create-a-multipage-sites.">Github pages combined with Jekyll front matter can be used to create a multipage sites.</h3>
+<ul>
+<li>Github will not convert any other files on the <code>gh-pages</code> branch to html unless the file containts top-matter in a particular format. The top-matter consists of two sets of three dashes, with variable(s) defined between, as given in the code block below.
+<ul>
+<li>In your repository click on <code>Add file</code> and <code>Create new file</code></li>
+<li>Name the file <code>Code-of-Conduct.md</code></li>
+<li>Paste the following front matter and content into the file</li>
+</ul></li>
+</ul>
+<pre><code>---
+title: Code of Conduct
+---
+
+Welcome to the {{page.title}} page.
+
+The first rule is: Be Nice!</code></pre>
+<ul>
+<li>Click <code>Commit new file</code></li>
+<li>You can see your new webpage at https://username.github.io/website-example/Code-of-Conduct.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Important: The three dashes at the top and bottom of your front matter are very important. If your file does not start with front matter in this format Jekyll will not convert the file to html.</p>
+</blockquote>
+<ul>
+<li>The front matter contains predefined global variables or custom variables. In this example, we have specified what the value of the <code>title</code> variable is. We can then access this variable in the main body of the page.</li>
+<li>If you don’t want to define any variables you can always leave it empty - but you must include the two sets of triple dashed lines.</li>
+<li>At this stage you may also want to update your <code>README.md</code> with links to the Hello-world webpage and the Code of Conduct.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Info: The Code of Conduct we use here is a silly example. However for many projects and initiatives having a Code of Conduct is important. There is more information on <a href="https://opensource.guide/code-of-conduct/">this page</a>.</p>
+</blockquote>
+</section>
+<section id="github-has-a-range-of-jekyll-themes-to-choose-from." class="level3">
+<h3 class="anchored" data-anchor-id="github-has-a-range-of-jekyll-themes-to-choose-from.">Github has a range of Jekyll themes to choose from.</h3>
+<ul>
+<li>You can add a theme to your GitHub Pages site to customize your site’s look and feel.</li>
+<li>There are a <a href="https://pages.github.com/themes/">range of Jekyll themes</a> that Github pages has built-in support for. To change the theme you can use the following steps:
+<ul>
+<li>In your repository click on <code>Settings</code></li>
+<li>Click on <code>Pages</code> in the left navigation bar</li>
+<li>Click on <code>Choose a theme</code></li>
+<li>Choose a theme to preview</li>
+<li>Click <code>Select theme</code></li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: The theme will only be applied to the README.md or webpages with the Jekyll front matter.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Note: When you select a new theme the <code>_config.yml</code> file in your repository is automatically updated.</p>
+</blockquote>
+</section>
+<section id="to-access-a-wider-range-of-customisation-options-you-can-fork-a-jekyll-template-and-edit-the-_config.yml-file." class="level3">
+<h3 class="anchored" data-anchor-id="to-access-a-wider-range-of-customisation-options-you-can-fork-a-jekyll-template-and-edit-the-_config.yml-file.">To access a wider range of customisation options you can fork a Jekyll template and edit the <code>_config.yml</code> file.</h3>
+<ul>
+<li>For example, you can follow the steps outlined for the <a href="https://github.com/daattali/beautiful-jekyll#build-your-website-in-3-steps">beautiful-jekyll blog template</a>:
+<ul>
+<li>Fork (copy) the <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll template</a> by clicking on the Fork button at the top right corner of the page</li>
+<li>Under the repository <code>Settings</code> rename the project repository e.g.&nbsp;<code>improved-website</code></li>
+<li>Under the repository <code>Settings</code>-&gt;<code>Github Pages</code> choose the <code>main</code> (or <code>master</code>) branch as the source</li>
+</ul></li>
+<li>This will create a website at https://username.github.io/improved-website.</li>
+<li>To customise edit the <code>_config.yml</code> file</li>
+<li>To add content edit the markdown files (see the <a href="https://github.com/daattali/beautiful-jekyll#add-your-own-content">beautiful-jekyll docs</a> for more information).</li>
+</ul>
+</section>
+<section id="for-more-flexibility-you-can-combine-other-static-site-generators-can-be-combined-with-github-actions-." class="level3">
+<h3 class="anchored" data-anchor-id="for-more-flexibility-you-can-combine-other-static-site-generators-can-be-combined-with-github-actions-.">For more flexibility you can combine other static site generators can be combined with Github actions .</h3>
+<ul>
+<li>Any static site generator can be combined with Github pages to create a website.</li>
+<li>For example, the <a href="https://rsc-northumbria.github.io/oswald-docs/">Northumbria Research Computing Community website</a> was built using MkDocs framework, Github Pages and Github Actions to build the webpages.
+<ul>
+<li>The <code>main</code> branch of the corresponding <a href="https://github.com/RSC-Northumbria/oswald-docs">Github repo</a> has a <code>mkdocs.yml</code> file that specifies the theme, plugins used and website navigation</li>
+<li>The <code>main</code> branch has a <code>docs</code> folder containing the website content as markdown files. In the root of the <code>docs</code> folder is the homepage <code>index.md</code>.</li>
+<li>The <code>main</code> branch contains a file <code>.github/workflows/build-docs.yml</code> which specifies how to build and deploy the html using the markdown files</li>
+<li>After commiting a change on the main branch, Github Actions will build the website and copy the html files to the <code>gh-pages</code> branch for publishing.</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: the <code>gh-pages</code> branch in this example includes a <code>.nojekyll</code> file to tell Github pages not to automatically build it using Jekyll</p>
+</blockquote>
+</section>
+<section id="task" class="level3">
+<h3 class="anchored" data-anchor-id="task">TASK</h3>
+<p>Use Github pages and Jekyll to create an academic website. This could include:</p>
+<ul>
+<li>A landing page with a short description of your background and interests</li>
+<li>Links to code that you have written (during this course or elsewhere)</li>
+<li>A picture of yourself or your experimental work</li>
+</ul>
+<p>Think of it as an online CV. It is a great way to promote your work to potential employers or supervisors.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

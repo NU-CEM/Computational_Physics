@@ -14,6 +14,7 @@ website:
     style: "docked"
     search: true
     contents:
+
       - section: "Getting Started"
         contents:
           - markdown/recap.qmd
@@ -58,8 +59,20 @@ website:
              - notebooks/FTCS_method.ipynb
              - href: markdown/PDE_questions.qmd
                text: Questions
-
-
+      - section: "Getting It Out There"
+        contents:
+          - href: markdown/out_there_introduction.qmd
+            text: Introduction
+          - href: markdown/scripting.qmd
+            text: Scripting
+          - href: markdown/websites.qmd
+            text: Build-your-own Website
+          - href: markdown/version_control.qmd
+            text: Version Control
+          - href: markdown/documentation.qmd
+            text: Documentation
+          - href: markdown/testing.qmd
+            text: Testing
 
 format:
   html:

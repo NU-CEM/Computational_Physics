@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Physics - Python recap</title>
+<title>Computational Physics - Testing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/recap.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../markdown/recap.html">Python recap</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/out_there_introduction.html">Getting It Out There</a></li><li class="breadcrumb-item"><a href="../markdown/testing.html">Testing</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link active">
+  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python recap</span></a>
   </div>
 </li>
@@ -375,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../markdown/testing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
@@ -387,14 +421,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#untested-software-can-be-compared-to-uncalibrated-detectors" id="toc-untested-software-can-be-compared-to-uncalibrated-detectors" class="nav-link active" data-scroll-target="#untested-software-can-be-compared-to-uncalibrated-detectors">Untested software can be compared to uncalibrated detectors</a></li>
+  <li><a href="#testing-helps-to-detect-errors-before-they-cause-problems" id="toc-testing-helps-to-detect-errors-before-they-cause-problems" class="nav-link" data-scroll-target="#testing-helps-to-detect-errors-before-they-cause-problems">Testing helps to detect errors before they cause problems</a></li>
+  <li><a href="#use-assertions-for-things-you-believe-willshould-never-happen." id="toc-use-assertions-for-things-you-believe-willshould-never-happen." class="nav-link" data-scroll-target="#use-assertions-for-things-you-believe-willshould-never-happen.">Use assertions for things you believe will/should never happen.</a></li>
+  <li><a href="#units-testing-is-for-small-components-units-of-a-code" id="toc-units-testing-is-for-small-components-units-of-a-code" class="nav-link" data-scroll-target="#units-testing-is-for-small-components-units-of-a-code">Units testing is for small components (units) of a code</a></li>
+  <li><a href="#pytest-can-be-used-to-implement-a-python-test-suite" id="toc-pytest-can-be-used-to-implement-a-python-test-suite" class="nav-link" data-scroll-target="#pytest-can-be-used-to-implement-a-python-test-suite">Pytest can be used to implement a Python test suite</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">TASKS</a></li>
+  <li><a href="#extension-tasks-automate-everything" id="toc-extension-tasks-automate-everything" class="nav-link" data-scroll-target="#extension-tasks-automate-everything">EXTENSION TASKS: Automate everything!</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Python recap</h1>
+<h1 class="title">Testing</h1>
 </div>
 
 
@@ -409,10 +455,168 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A pre-requisite for this course is a basic understanding of Python. If you need to recap on the basics, you can use the <a href="https://lucydot.github.io/python_novice/">Python for Physicists website</a> - this covers all of the pre-requisite knowledge needed.</p>
-<p>To self-assess your level of understanding, we recommend using <a href="https://lucydot.github.io/Python_Northumbria_2023">ChooChoo the Checklist tool</a>.</p>
+<section id="untested-software-can-be-compared-to-uncalibrated-detectors" class="level3">
+<h3 class="anchored" data-anchor-id="untested-software-can-be-compared-to-uncalibrated-detectors">Untested software can be compared to uncalibrated detectors</h3>
+<blockquote class="blockquote">
+<p>“Before relying on a new experimental device, an experimental scientist always establishes its accuracy. A new detector is calibrated when the scientist observes &gt; its responses to known input signals. The results of this calibration are compared against the expected response.”</p>
+</blockquote>
+<p>From <a href="https://carpentries-incubator.github.io/python-testing/">Testing and Continuous Integration with Python</a>, created by K. Huff</p>
+<p>Simulations and analysis using software should be held to the same standards as experimental measurement devices!</p>
+<p>Further motivation for testing: - <a href="https://science.sciencemag.org/content/314/5807/1856.summary">A Scientist’s Nightmare: Software Problem Leads to Five Retractions</a> - <a href="https://arstechnica.com/information-technology/2019/10/chemists-discover-cross-platform-python-scripts-not-so-cross-platform/">Researchers find bug in Python script may have affected hundreds of studies</a></p>
+</section>
+<section id="testing-helps-to-detect-errors-before-they-cause-problems" class="level3">
+<h3 class="anchored" data-anchor-id="testing-helps-to-detect-errors-before-they-cause-problems">Testing helps to detect errors before they cause problems</h3>
+<p>In software tests, expected results are compared with observed results in order to establish accuracy: - As projects grow, it becomes easier to break things without noticing immediately - Software defects can be caused by both human errors and non-controllable events (i.e.&nbsp;environmental conditions) - Testing is essential for research software because we care about reproducibility of scientific results</p>
+<p>Testing also encourages others to use your code: - It provides a way for users to see if the code is installed correctly - It allows users to better judge the quality of the code</p>
+<p>Finally, testing encourages other developers to contribute to your code as it is easier for external developers to contribute to the project without breaking your code (or at least it is clear when they have broken the code!)</p>
+<p>However bear in mind that tested code does not mean the code is <em>perfect</em>; “Program testing can be used to show the presence of bugs, but never to show their absence!” (Edsger W. Dijkstra)</p>
+<p><strong>Discussion question:</strong> Can you think of examples where it is <em>not</em> necessary to share your code?</p>
+<details>
+<summary>
+Show answer
+</summary>
+<p>Some examples where you may choose not to test your code: - A Jupyter notebook which produces a plot and you know by looking at the plot whether it worked - A short, ‘obviously correct’ Python script which you never intend to reuse</p>
+</details>
+</section>
+<section id="use-assertions-for-things-you-believe-willshould-never-happen." class="level3">
+<h3 class="anchored" data-anchor-id="use-assertions-for-things-you-believe-willshould-never-happen.">Use assertions for things you believe will/should never happen.</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kelvin_to_celsius(temp_k):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Converts temperature in Kelvin</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    to Celsius.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> temp_k <span class="op">&gt;=</span> <span class="fl">0.0</span>, <span class="st">"ERROR: negative T_K"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    temp_c <span class="op">=</span> temp_k <span class="op">-</span> <span class="fl">273.15</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> temp_c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="units-testing-is-for-small-components-units-of-a-code" class="level3">
+<h3 class="anchored" data-anchor-id="units-testing-is-for-small-components-units-of-a-code">Units testing is for small components (units) of a code</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fahrenheit_to_celsius(temp_f):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Converts temperature in Fahrenheit</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    to Celsius.</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    temp_c <span class="op">=</span> (temp_f <span class="op">-</span> <span class="fl">32.0</span>) <span class="op">*</span> (<span class="fl">5.0</span><span class="op">/</span><span class="fl">9.0</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> temp_c</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the test function: `assert` raises an error if something</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># is wrong.</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_fahrenheit_to_celsius():</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    temp_c <span class="op">=</span> fahrenheit_to_celsius(temp_f<span class="op">=</span><span class="fl">100.0</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    expected_result <span class="op">=</span> <span class="fl">37.777777</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">abs</span>(temp_c <span class="op">-</span> expected_result) <span class="op">&lt;</span> <span class="fl">1.0e-6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Unit tests are functions</li>
+<li>Unit testing is used to test one unit: for example, a single function</li>
+</ul>
+<p><strong>Question:</strong> In the example above we want to check if the calculated <code>temp_c</code> is equal to the <code>expected_result</code>. Why do we use the assert statement <code>abs(temp_c - expected_result) &lt; 1.0e-6</code> instead of the simpler assert statement <code>temp_c == expected_result</code>?</p>
+<details>
+<summary>
+Show answer
+</summary>
+<p>Due to the inherent limitations to computational accuracy, we should not test for the exact equality between two floats. Instead we check that they are the same to within a numerical tolerance (in this case 1.0e-6). For more details please see the lesson <a href="https://nu-cem.github.io/CompPhys/2021/08/02/Evaluating-Accuracy">Evaluating numerical errors and accuracy</a>.</p>
+</details>
+<p>Another commonly used type of testing is called <strong>end-to-end</strong>. End-to-end tests check if the software is working as a whole, from beginning to end. For example, you input example data at the start of a simulation and then check that the end results of the simulation are correct.</p>
+</section>
+<section id="pytest-can-be-used-to-implement-a-python-test-suite" class="level3">
+<h3 class="anchored" data-anchor-id="pytest-can-be-used-to-implement-a-python-test-suite">Pytest can be used to implement a Python test suite</h3>
+<p>Rather than running unit tests one-by-one we can use <a href="http://pytest.org/">pytest</a> to automatically find and run all the tests within a project; pytest collects and runs all test functions starting with test_.</p>
+<p>In the following steps we will make a simple Python function and use pytest to test it.</p>
+<ol type="1">
+<li>Create a new directory and change into it:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> pytest-example</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> pytest-example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Then create a file called example.py and copy-paste the following code into it:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="st">'space'</span>, <span class="st">'ship'</span>) <span class="op">==</span> <span class="st">'spaceship'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This code contains one genuine function and a test function. pytest finds any functions beginning with test_ and treats them as tests.</p>
+<ol start="3" type="1">
+<li>Let us try to test it with pytest:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">-v</span> example.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>============================================================ test session starts =================================
+platform linux -- Python 3.7.2, pytest-4.3.1, py-1.8.0, pluggy-0.9.0 -- /home/user/pytest-example/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/user/pytest-example, inifile:
+collected 1 item
+
+example.py::test_add PASSED
+
+========================================================= 1 passed in 0.01 seconds ===============================</code></pre>
+<p>Yay! The test passed!</p>
+<ol start="4" type="1">
+<li>Let us break the test! Introduce a code change which breaks the code and check whether pytest detects the change:</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">-v</span> example.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>============================================================ test session starts =================================
+platform linux -- Python 3.7.2, pytest-4.3.1, py-1.8.0, pluggy-0.9.0 -- /home/user/pytest-example/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/user/pytest-example, inifile:
+collected 1 item
+
+example.py::test_add FAILED
+
+================================================================= FAILURES =======================================
+_________________________________________________________________ test_add _______________________________________
+
+    def test_add():
+&gt;       assert add(2, 3) == 5
+E       assert -1 == 5
+E         --1
+E         +5
+
+example.py:6: AssertionError
+========================================================= 1 failed in 0.05 seconds ==============</code></pre>
+<p>Notice how pytest is smart and includes context: lines that failed, values of the relevant variables.</p>
+<p><strong>Question:</strong> In the example above we have compared integers. In this optional exercise we want to learn how to compare floating point numbers since they are more tricky.</p>
+<p>The following test will fail and this might be surprising. Try it out:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="fl">0.1</span>, <span class="fl">0.2</span>) <span class="op">==</span> <span class="fl">0.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Your goal: find a more robust way to test this addition.</p>
+<details>
+<summary>
+Show answer
+</summary>
+<p>One solution is to use <code>pytest.approx</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytest <span class="im">import</span> approx</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="fl">0.1</span>, <span class="fl">0.2</span>) <span class="op">==</span> approx(<span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But maybe you didn’t know about pytest.approx: and did this instead:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> add(<span class="fl">0.1</span>, <span class="fl">0.2</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">abs</span>(result <span class="op">-</span> <span class="fl">0.3</span>) <span class="op">&lt;</span> <span class="fl">1.0e-7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is OK but the 1.0e-7 can be a bit arbitrary.</p>
+</details>
+</section>
+<section id="tasks" class="level3">
+<h3 class="anchored" data-anchor-id="tasks">TASKS</h3>
+<ol type="1">
+<li>Write and run a unit test for the <code>Lorenz()</code> function in the <code>Lorenz.py</code> script you developed in the Scripting lesson.</li>
+</ol>
+</section>
+<section id="extension-tasks-automate-everything" class="level3">
+<h3 class="anchored" data-anchor-id="extension-tasks-automate-everything">EXTENSION TASKS: Automate everything!</h3>
+<ol start="2" type="1">
+<li>Automated testing using Continuous Integration allows us to automatically run tests when there is a commit to a Github repository. Following the tutorial from <a href="https://coderefinery.github.io/testing/continuous-integration/">The Code Refinery</a>, implement continuous integration for a Github repository holding <code>Lorenz.py</code> (this could be the Github repository you created in the <a href="https://nu-cem.github.io/CompPhys/2021/08/02/Version_control.html">previous lesson</a>). Note that you will have to adapt the workflow file so that pip installs the python packages imported in your script (for Lorenz.py the packages are numpy and matplotlib).</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

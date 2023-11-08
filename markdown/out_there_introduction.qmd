@@ -1,0 +1,21 @@
+---
+title: Introduction to sharing your code
+---
+
+In the course so far you have learnt the building blocks of numerical modelling with Python and Jupyter Notebooks. With this you can write a surprising amount of useful code! However our efforts are rewarded many times over if we can share the code we have written. Sharing your code:
+
+- clearly demonstrates your programming skills to future employers and/or supervisors
+- enables other researchers to use your code, progressing science forwards
+- establishes you an active participant in a particular domain or community of practice (people *know who you are*)
+
+However it is unfortunately not enough to stick our Python code online and hope that other people will use them. Additional components we might need are:
+
+- Tests to demonstrate that our code is reliable
+- Documentation so that others understand how best to use the code
+- Code that can be imported into other Python modules or ran from the command line
+- Version control to track changes in our code and work collaboratively
+- Websites to promote or document the code
+
+These aspects are covered in this section of the course `Getting it out there`.
+
+Please note that some of the tutorials in this section have been closeley adapted, with permission, from the [Code Refinery software testing lesson](https://coderefinery.github.io/testing/motivation/) and the [Code Refinery documentation lesson](https://coderefinery.github.io/documentation/).

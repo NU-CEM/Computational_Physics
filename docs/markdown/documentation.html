@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Physics - Python recap</title>
+<title>Computational Physics - Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/recap.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../markdown/recap.html">Python recap</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../markdown/out_there_introduction.html">Getting It Out There</a></li><li class="breadcrumb-item"><a href="../markdown/documentation.html">Documentation</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link active">
+  <a href="../markdown/recap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python recap</span></a>
   </div>
 </li>
@@ -369,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../markdown/documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../markdown/documentation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Documentation</span></a>
   </div>
 </li>
@@ -387,14 +421,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#documentation-comes-in-different-forms" id="toc-documentation-comes-in-different-forms" class="nav-link active" data-scroll-target="#documentation-comes-in-different-forms">Documentation comes in different forms</a></li>
+  <li><a href="#the-readme-file-is-important-for-users" id="toc-the-readme-file-is-important-for-users" class="nav-link" data-scroll-target="#the-readme-file-is-important-for-users">The README file is important for users</a></li>
+  <li><a href="#in-code-documentation-is-important-for-code-developers" id="toc-in-code-documentation-is-important-for-code-developers" class="nav-link" data-scroll-target="#in-code-documentation-is-important-for-code-developers">In-code documentation is important for code developers</a></li>
+  <li><a href="#a-docstring-is-a-structured-comment-associated-to-a-segment-of-code-i.e.-a-function-or-class." id="toc-a-docstring-is-a-structured-comment-associated-to-a-segment-of-code-i.e.-a-function-or-class." class="nav-link" data-scroll-target="#a-docstring-is-a-structured-comment-associated-to-a-segment-of-code-i.e.-a-function-or-class.">A docstring is a structured comment associated to a segment of code (i.e.&nbsp;a function or class).</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">TASKS</a></li>
+  <li><a href="#extension-tasks-automate-everything" id="toc-extension-tasks-automate-everything" class="nav-link" data-scroll-target="#extension-tasks-automate-everything">EXTENSION TASKS: Automate everything!</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Python recap</h1>
+<h1 class="title">Documentation</h1>
 </div>
 
 
@@ -409,10 +454,126 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A pre-requisite for this course is a basic understanding of Python. If you need to recap on the basics, you can use the <a href="https://lucydot.github.io/python_novice/">Python for Physicists website</a> - this covers all of the pre-requisite knowledge needed.</p>
-<p>To self-assess your level of understanding, we recommend using <a href="https://lucydot.github.io/Python_Northumbria_2023">ChooChoo the Checklist tool</a>.</p>
+<section id="documentation-comes-in-different-forms" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-comes-in-different-forms">Documentation comes in different forms</h3>
+<blockquote class="blockquote">
+<p>There is nothing in the programming field more despicable than an undocumented program.  — Ed Yourdon, Software Engineering pioneer</p>
+</blockquote>
+<ul>
+<li>Tutorials: learning-oriented, allows the newcomer to get started</li>
+<li>How-to guides: goal-oriented, shows how to solve a specific problem</li>
+<li>Explanation: understanding-oriented, explains a concept</li>
+<li>Reference: information-oriented, describes the machinery</li>
+</ul>
+<p>These are distinct. For an excellent discussion, please see <a href="https://documentation.divio.com/">What nobody tells you about documentation</a>.</p>
+<p>There is no one size fits all: however a good starting point is almost always to include a <code>README</code> file with your code. Your code may, depending on the number of users apart from yourself, also include:</p>
+<ul>
+<li>Purpose</li>
+<li>Authors</li>
+<li>License</li>
+<li>Recommended citation</li>
+<li>Copy-paste-able example to get started</li>
+<li>Dependencies and their versions or version ranges</li>
+<li>Installation instructions</li>
+<li>Tutorials covering key functionality</li>
+<li>Reference documentation (e.g.&nbsp;API) covering all functionality</li>
+<li>How do you want to be asked questions (mailing list or forum or chat or issue tracker)</li>
+<li>FAQ section</li>
+<li>Contribution guide</li>
+</ul>
+<p><strong>Question:</strong> Visit the Github repository for <a href="https://github.com/lucydot/effmass/">effmass</a> and explore the repository and documentation site.</p>
+<ol type="1">
+<li>Which different types (tutorials/how-to/explanation/reference) of documentation can you find?</li>
+<li>Are all the items in the bullet point list included?</li>
+</ol>
+<details>
+<summary>
+Show answer
+</summary>
+<ol type="1">
+<li></li>
+</ol>
+<ul>
+<li>There is a <a href="https://github.com/lucydot/effmass/">README file</a> with basic installation how-to instructions and an overview of the functionality.</li>
+<li>There are <a href="https://nbviewer.org/github/lucydot/effmass/blob/master/Tutorial.ipynb">notebook tutorials</a> for allowing newcomers to get started.</li>
+<li>There is API reference information <a href="https://effmass.readthedocs.io/en/latest/API%20documentation.html">here</a> which describes how each function works.</li>
+<li>There is a <a href="https://arxiv.org/pdf/1811.02281.pdf">paper</a> which explains some of the concepts behind the code (for example the different definitions of effective mass).</li>
+</ul>
+<ol start="2" type="1">
+<li>All of the bullet points on the list are included except i) there is no FAQ ii) the example is a Jupyter notebook and is not quickly copy-pastable (you would end up with the code and the surrounding text, which would then need to be removed).</li>
+</ol>
+</details>
+</section>
+<section id="the-readme-file-is-important-for-users" class="level3">
+<h3 class="anchored" data-anchor-id="the-readme-file-is-important-for-users">The README file is important for users</h3>
+<ul>
+<li>The README file is important as it is usually the first thing people look at when visiting a code repository.</li>
+<li>Use it to communitcate important information about your project.</li>
+<li>Write your README using a markup language such as Markdown. Github will automatically format your markdown file when you push it to your Github repository.</li>
+<li>The README should be in the top-level of your repository</li>
+<li>To make your README extra friendly you can use emojis.</li>
+<li>A README file might contains: A summary of the software purpose, author list, a link to the license file, a recommended citation, installation instructions and a list of code dependencies (e.g.&nbsp;numpy, matplotlib), a link to the issues tracker, and any other contact details.</li>
+</ul>
+</section>
+<section id="in-code-documentation-is-important-for-code-developers" class="level3">
+<h3 class="anchored" data-anchor-id="in-code-documentation-is-important-for-code-developers">In-code documentation is important for code developers</h3>
+<ul>
+<li>In-code documentation are very useful for people wanting to contribute to your code.</li>
+<li>They can also be used to auto-generate online documentation for functions/classes (for more information see the extension task below).</li>
+<li>The most commonly used Python in-code documentation are comments starting with <code>#</code> and Python docstrings</li>
+</ul>
+<p><strong>Question:</strong> Which of the comments below is the best and why?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we check if temperature is larger then -50:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> temperature <span class="op">&gt;</span> <span class="op">-</span><span class="dv">50</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'do something'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We regard temperatures below -50 degrees as measurement errors</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> temperature <span class="op">&gt;</span> <span class="op">-</span><span class="dv">50</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'do something'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Show answer
+</summary>
+<p>The first comment describes what happens in this piece of code, whereas the second describes why this piece of code is there, i.e.&nbsp;its purpose. Comments like the second comment are much more useful.</p>
+</details>
+</section>
+<section id="a-docstring-is-a-structured-comment-associated-to-a-segment-of-code-i.e.-a-function-or-class." class="level3">
+<h3 class="anchored" data-anchor-id="a-docstring-is-a-structured-comment-associated-to-a-segment-of-code-i.e.-a-function-or-class.">A docstring is a structured comment associated to a segment of code (i.e.&nbsp;a function or class).</h3>
+<p>We have already written basic docstrings. Here we will see how to write <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Google style docstrings</a>. Let’s look at the following function:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mean_temperature(temperatures):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(temperatures)<span class="op">/</span><span class="bu">len</span>(temperatures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can make it clearer what this function does and how to use it using a docstring. A good docstring describes:</p>
+<ul>
+<li>What the function does</li>
+<li>What goes in (including the type of the input variables)</li>
+<li>What goes out (including the return type)</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mean_temperature(temperatures):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">      Get the mean temperature</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">      Args:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">          data (list): A list with air temperature measurements.</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">      Returns:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">          The mean air temperature (float)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(temperatures)<span class="op">/</span><span class="bu">len</span>(temperatures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Two key advantages of docstrings are: - Python parses docstrings, for example calling the <code>help</code> function will display the docstring: try <code>help(mean_temperature)</code> - You can generate your documentation as you are generating the code. In fact, thinking carefully about what the input/output/behaviour should be may encourage you to write better code!</p>
+</section>
+<section id="tasks" class="level3">
+<h3 class="anchored" data-anchor-id="tasks">TASKS</h3>
+<ol type="1">
+<li>Write a docstring for the <code>Lorenz()</code> function in the <code>Lorenz.py</code> script. Follow the <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#383-functions-and-methods">Google docstring format</a> as in the example above.</li>
+</ol>
+</section>
+<section id="extension-tasks-automate-everything" class="level3">
+<h3 class="anchored" data-anchor-id="extension-tasks-automate-everything">EXTENSION TASKS: Automate everything!</h3>
+<ol start="2" type="1">
+<li>API (Application Programming Interface) documentation can be automatically generated using a tool such as <a href="https://pdoc3.github.io/pdoc/">pdoc3</a>. These tools read in all of the docstrings within a Python package and generate a webpage accordingly. For example, see the API documentation for the <a href="https://effmass.readthedocs.io/en/latest/inputs.html">effmass project</a>. Automatic API documentation is a real gamechanger; as long as we write update the docstrings alongside our code, we can quickly generate new documentation. Following the documentation on <a href="https://pdoc3.github.io/pdoc/">pdoc3</a> generate a html page with the API documentation for Lorenz.py. In the next lesson you will learn how to host this page using Github Pages.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
