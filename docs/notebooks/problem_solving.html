@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Physics - Initial and boundary conditions</title>
+<title>Computational Physics - Problem Solving and Algorithms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Getting Results</li><li class="breadcrumb-item"><a href="../markdown/ODE_introduction.html">Ordinary Differential Equations</a></li><li class="breadcrumb-item"><a href="../notebooks/ODE_boundary_and_initial.html">Initial and boundary conditions</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Getting Results</li><li class="breadcrumb-item"><a href="../notebooks/problem_solving.html">Problem Solving</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -236,13 +236,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Ordinary Differential Equations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../markdown/ODE_introduction.html" class="sidebar-item-text sidebar-link">
@@ -257,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/ODE_boundary_and_initial.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notebooks/ODE_boundary_and_initial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Initial and boundary conditions</span></a>
   </div>
 </li>
@@ -336,7 +336,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/problem_solving.html" class="sidebar-item-text sidebar-link">
+  <a href="../notebooks/problem_solving.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Problem Solving</span></a>
   </div>
 </li>
@@ -399,12 +399,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#radioactive-decay-can-be-modelled-a-linear-first-order-ode" id="toc-radioactive-decay-can-be-modelled-a-linear-first-order-ode" class="nav-link active" data-scroll-target="#radioactive-decay-can-be-modelled-a-linear-first-order-ode">Radioactive decay can be modelled a linear, first-order ODE</a></li>
-  <li><a href="#the-equation-for-radioactive-decay-is-separable-and-has-an-analytic-solution" id="toc-the-equation-for-radioactive-decay-is-separable-and-has-an-analytic-solution" class="nav-link" data-scroll-target="#the-equation-for-radioactive-decay-is-separable-and-has-an-analytic-solution">The equation for radioactive decay is separable and has an analytic solution</a></li>
-  <li><a href="#to-model-a-physical-system-an-initial-value-has-to-be-provided" id="toc-to-model-a-physical-system-an-initial-value-has-to-be-provided" class="nav-link" data-scroll-target="#to-model-a-physical-system-an-initial-value-has-to-be-provided">To model a physical system an initial value has to be provided</a></li>
-  <li><a href="#odes-can-have-initial-values-or-boundary-values" id="toc-odes-can-have-initial-values-or-boundary-values" class="nav-link" data-scroll-target="#odes-can-have-initial-values-or-boundary-values">ODEs can have initial values or boundary values</a></li>
-  <li><a href="#the-number-of-initial-conditions-depends-on-the-order-of-the-differential-equation" id="toc-the-number-of-initial-conditions-depends-on-the-order-of-the-differential-equation" class="nav-link" data-scroll-target="#the-number-of-initial-conditions-depends-on-the-order-of-the-differential-equation">The number of initial conditions depends on the order of the differential equation</a></li>
-  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test your understanding</a></li>
+  <li><a href="#algorithm-development" id="toc-algorithm-development" class="nav-link active" data-scroll-target="#algorithm-development">Algorithm development</a></li>
+  <li><a href="#step-0-project-management" id="toc-step-0-project-management" class="nav-link" data-scroll-target="#step-0-project-management">Step 0: Project management</a></li>
+  <li><a href="#step-1-obtain-a-description-of-the-problem." id="toc-step-1-obtain-a-description-of-the-problem." class="nav-link" data-scroll-target="#step-1-obtain-a-description-of-the-problem.">Step 1: Obtain a description of the problem.</a></li>
+  <li><a href="#step-2-analyze-the-problem." id="toc-step-2-analyze-the-problem." class="nav-link" data-scroll-target="#step-2-analyze-the-problem.">Step 2: Analyze the problem.</a></li>
+  <li><a href="#step-3-develop-a-high-level-algorithm." id="toc-step-3-develop-a-high-level-algorithm." class="nav-link" data-scroll-target="#step-3-develop-a-high-level-algorithm.">Step 3: Develop a high-level algorithm.</a></li>
+  <li><a href="#step-4-refine-the-algorithm-by-adding-more-detail." id="toc-step-4-refine-the-algorithm-by-adding-more-detail." class="nav-link" data-scroll-target="#step-4-refine-the-algorithm-by-adding-more-detail.">Step 4: Refine the algorithm by adding more detail.</a></li>
+  <li><a href="#step-5-review-the-algorithm." id="toc-step-5-review-the-algorithm." class="nav-link" data-scroll-target="#step-5-review-the-algorithm.">Step 5: Review the algorithm.</a></li>
+  <li><a href="#step-6-implement-the-algorithm-as-code" id="toc-step-6-implement-the-algorithm-as-code" class="nav-link" data-scroll-target="#step-6-implement-the-algorithm-as-code">Step 6: Implement the algorithm as code</a></li>
+  <li><a href="#step-7-review-the-results" id="toc-step-7-review-the-results" class="nav-link" data-scroll-target="#step-7-review-the-results">Step 7: Review the results</a></li>
+  <li><a href="#step-8-review-the-code" id="toc-step-8-review-the-code" class="nav-link" data-scroll-target="#step-8-review-the-code">Step 8: Review the code</a></li>
   </ul>
 </nav>
     </div>
@@ -413,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial and boundary conditions</h1>
+<h1 class="title">Problem Solving and Algorithms</h1>
 </div>
 
 
@@ -428,102 +432,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>How can I describe radioactive decay using a first-order ODE?</li>
-<li>What are <mark>initial conditions</mark> and why are they important?</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Map between physical notation for a particular problem and the more general notation for all differential equations</li>
-<li>Solve a linear, first order, separable ODE using integration</li>
-<li>Understand the physical importance of initial conditions</li>
-</ul>
-</div>
-</div>
-<section id="radioactive-decay-can-be-modelled-a-linear-first-order-ode" class="level3">
-<h3 class="anchored" data-anchor-id="radioactive-decay-can-be-modelled-a-linear-first-order-ode">Radioactive decay can be modelled a linear, first-order ODE</h3>
-<p>As our first example of an ODE we will model radioactive decay using a differential equation.</p>
-<p>We know that the decay rate is proportional to the number of atoms present. Mathematically, this relationship can be expressed as:</p>
-<p><span class="math display">\[\begin{equation}
-\frac{d N}{d t} = -\lambda N
-\end{equation}\]</span></p>
-<p>Note that we could choose to use different variables, for example:</p>
-<p><span class="math display">\[\begin{equation}
-\frac{d y}{d x} = cy
-\end{equation}\]</span></p>
-<p>However we try to use variables connected to the context of the problem. For example <span class="math inline">\(N\)</span> for the Number of atoms.</p>
-<p>For example, if we know that 10% of atoms will decay per second we could write:</p>
-<p><span class="math display">\[\begin{equation}
-\frac{d N}{d t} = -0.1 N
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(N\)</span> is the number of atoms and <span class="math inline">\(t\)</span> is time measured in seconds.</p>
-<p>This equation is linear and first-order.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>physical notation</th>
-<th>generic notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>number of atoms <span class="math inline">\(N\)</span></td>
-<td>dependent variable <span class="math inline">\(y\)</span></td>
-</tr>
-<tr class="even">
-<td>time <span class="math inline">\(t\)</span></td>
-<td>independent variable <span class="math inline">\(x\)</span></td>
-</tr>
-<tr class="odd">
-<td>decay rate <span class="math inline">\(\frac{dN}{dt}\)</span></td>
-<td>differential <span class="math inline">\(\frac{dy}{dx}\)</span></td>
-</tr>
-<tr class="even">
-<td>constant of proportionality $ $</td>
-<td>parameter <span class="math inline">\(c\)</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="the-equation-for-radioactive-decay-is-separable-and-has-an-analytic-solution" class="level3">
-<h3 class="anchored" data-anchor-id="the-equation-for-radioactive-decay-is-separable-and-has-an-analytic-solution">The equation for radioactive decay is separable and has an analytic solution</h3>
-<p>The radioactive decay equation is <mark>separable</mark>. For example,</p>
-<p><span class="math display">\[\begin{equation}
-\frac{d N}{d t} = -\lambda N
-\end{equation}\]</span></p>
-<p>Can be seperated as</p>
-<p><span class="math display">\[\begin{equation}
-\frac{dN}{N} = -\lambda dt.
-\end{equation}\]</span></p>
-<p>We can then integrate each side:</p>
-<p><span class="math display">\[\begin{equation}
-\ln N = -\lambda t + const.
-\end{equation}\]</span></p>
-<p>and solve for N:</p>
-<p><span class="math display">\[\begin{equation}
-N = e^{-\lambda t}e^{\textrm{const.}}
-\end{equation}\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -534,181 +442,270 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Remember that <span class="math inline">\(\int \frac{1}{x} dx = \ln x + \textrm{const.}\)</span></p>
+<p>Some of this notebook is adapted from the text on this website: <a href="http://sofia.cs.vt.edu/cs1114-ebooklet/chapter4.html">sofia.cs.vt.edu/cs1114-ebooklet/</a></p>
 </div>
 </div>
-</section>
-<section id="to-model-a-physical-system-an-initial-value-has-to-be-provided" class="level3">
-<h3 class="anchored" data-anchor-id="to-model-a-physical-system-an-initial-value-has-to-be-provided">To model a physical system an initial value has to be provided</h3>
-<p>At the beginning (when <span class="math inline">\(t=0\)</span>):</p>
-<p><span class="math display">\[\begin{equation}
-N = e^{-\lambda t}e^{\textrm{const.}} = e^{0}e^{\textrm{const.}} = e^{\textrm{const.}}
-\end{equation}\]</span></p>
-<p>So we can identify <span class="math inline">\(e^{\textrm{const.}}\)</span> as the amount of radioactive material that was present in the beginning. We denote this starting amount as <span class="math inline">\(N_0\)</span>.</p>
-<p>Substituting this back into Equation 4, the final solution can be more meaningfully written as:</p>
-<p><span class="math display">\[\begin{equation}
-N = N_0 e^{-\lambda t}
-\end{equation}\]</span></p>
-<p>We now have not just one solution, but a whole class of solutions that are dependent on the initial amount of radioactive material <span class="math inline">\(N_0\)</span>.</p>
-<p>Remember that not all mathematical solutions make physical sense. <mark>To model a physical system, this initial value (also known as initial condition) has to be provided alongside the constant of proportionality <span class="math inline">\(\lambda\)</span>.</mark></p>
-</section>
-<section id="odes-can-have-initial-values-or-boundary-values" class="level3">
-<h3 class="anchored" data-anchor-id="odes-can-have-initial-values-or-boundary-values">ODEs can have initial values or boundary values</h3>
-<p>ODEs have either initial values or boundary values. For example, using Newton’s second laws we could calculate the distance <span class="math inline">\(x\)</span> an object travels under the influence of gravity over time <span class="math inline">\(t\)</span></p>
-<p><span class="math display">\[\begin{equation}
-\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -g
-\end{equation}\]</span></p>
-<p>An initial value problem would be where we know the starting position and velocity. A boundary value problem would be where we specify the position of the ball at times <span class="math inline">\(t=t_0\)</span> and <span class="math inline">\(t=t_1\)</span>.</p>
-<p>In this course we will only study ODEs with initial values. ODEs with boundary values are more difficult to solve, but you can find additional materials in the course textbook.</p>
-</section>
-<section id="the-number-of-initial-conditions-depends-on-the-order-of-the-differential-equation" class="level3">
-<h3 class="anchored" data-anchor-id="the-number-of-initial-conditions-depends-on-the-order-of-the-differential-equation">The number of initial conditions depends on the order of the differential equation</h3>
-<p>Our radioactive decay example is a first-order ODE and so we only had to provide a single initial condition. For second-order ODEs (such as acceleration under gravity) we need to provide two initial/boundary conditions, for third-order ODEs we would need to provide three, and so on.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
+<p>In this section of the course we learn how to develop a solution to an unseen problem. The guidance here is not unique to physics, or even using a computer to solve a problem. This process can be used to solve a wide variety of problems, including those which are unrelated to computers.</p>
+<section id="algorithm-development" class="level2">
+<h2 class="anchored" data-anchor-id="algorithm-development">Algorithm development</h2>
+<p>An algorithm is a plan for solving a problem. An algorithm can take many forms: a written description (e.g.&nbsp;recipe), mathematical (e.g.&nbsp;steps for solving a quadratic equation) or graphical (e.g.&nbsp;an Ikea instruction booklet).</p>
+<p>In the context of computational physics, an algorithm allows us to translate a physics problem into a computer program. Algorithm development consists of several major steps, each of which is outlined below.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Keypoints
+Everyday example
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Radioactive decay can be modelled a linear, first-order ODE</li>
-<li>The equation for radioactive decay is separable and has an analytic solution</li>
-<li>To model a physical system an initial value has to be provided</li>
-<li>The number of initial conditions depends on the order of the differential equation</li>
-</ul>
+<p>Boxes like this contain the guidance applied to an everyday example.</p>
 </div>
 </div>
 </section>
-<section id="test-your-understanding" class="level3">
-<h3 class="anchored" data-anchor-id="test-your-understanding">Test your understanding</h3>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<section id="step-0-project-management" class="level2">
+<h2 class="anchored" data-anchor-id="step-0-project-management">Step 0: Project management</h2>
+<p>The first step is to establish how you will communicate with your team-mates, colleagues or client. Things to decide include:</p>
+<ul>
+<li>project meetings:
+<ul>
+<li>how frequently will you meet?</li>
+<li>online or in-person?</li>
+<li>where will you meet?</li>
+<li>at what time?</li>
+</ul></li>
+<li>asyncronous communication (communication not occuring at the same time) and file-sharing: this could be via a Whatsapp group, Blackboard group, email or Github issue threads.</li>
+<li>strategy: will you work on the same question, or different questions? Will you do the majority of work as individuals or at project meetings?</li>
+</ul>
+</section>
+<section id="step-1-obtain-a-description-of-the-problem." class="level2">
+<h2 class="anchored" data-anchor-id="step-1-obtain-a-description-of-the-problem.">Step 1: Obtain a description of the problem.</h2>
+<p>In the context of a university degree, the description of the problem will be given as a written assessment question. In a professional setting, you may receive written or verbal instructions from a client or colleague.</p>
+<p>Problem description is often the weakest part of the process. It’s quite common for a problem description to suffer from one or more of the following types of problems:</p>
+<ul>
+<li>the description relies on unstated assumptions</li>
+<li>the description is ambiguous</li>
+<li>the description is incomplete</li>
+<li>the description has internal contradictions.</li>
+</ul>
+<p>These problems are often not due to carelessness. Instead, they are due to the fact that natural languages (English, French, Korean, etc.) can be imprecise.</p>
+<p>Part of the algorithm developer’s responsibility is to identify defects in the description of a problem, and to work with your collaborators to remedy those defects. In this case, you must clearly communicate any decisions made to your collaborators.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Terminology tables
+Everyday example
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In this tutorial there is a table listing the dependent variable, independent variable, differential and parameter(s). Complete a similar table for the following physical systems:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>physical notation</th>
-<th>generic notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>dependent variable(s)</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>independent variable(s)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>differential(s)</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>parameter(s)/constants(s)</td>
-</tr>
-</tbody>
-</table>
-<ol type="a">
-<li>The amount of charge that flows every second from a capacitor,</li>
-</ol>
-<p><span class="math display">\[\begin{equation}
-\frac{\mathrm{d} Q}{\mathrm{d} t} = -\beta Q
-\end{equation}\]</span></p>
-<ol start="2" type="a">
-<li>The motion of a non-linear pendulum driven by a force oscillating at frequency <span class="math inline">\(\sigma\)</span>,</li>
-</ol>
-<p><span class="math display">\[\begin{equation}
-\frac{\mathrm{d}^2\theta}{\mathrm{t}^2} = -\frac{g}{l}\sin(\theta) + C\cos(\theta)\sin(\sigma t).
-\end{equation}\]</span></p>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<p>Problem: I need you to a send a birthday card to my sister Ruby.</p>
+</div>
+</div>
+</section>
+<section id="step-2-analyze-the-problem." class="level2">
+<h2 class="anchored" data-anchor-id="step-2-analyze-the-problem.">Step 2: Analyze the problem.</h2>
+<p>Read the instructions and determine the answers to the following questions:</p>
+<ul>
+<li>What data is available?</li>
+<li>How to access the data?</li>
+<li>What data or information is missing, ambiguous or contradictory?</li>
+<li>Which formulas relate to the problem?</li>
+<li>Which methods relate to the problem?</li>
+<li>Is there guidance/constraints for working with the data?</li>
+<li>Which resources can I use to help develop an algorithm?</li>
+</ul>
+<p>When determining the ending point, we need to describe the characteristics of a solution. In other words, how will we know when we’re done? Asking the following questions often helps to determine the ending point.</p>
+<ul>
+<li>What new facts will we have?</li>
+<li>What items will be created or changed?</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Show answer
+Everyday example
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li></li>
-</ol>
-<table class="table">
-<thead>
-<tr class="header">
-<th>physical notation</th>
-<th>generic notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Q\)</span></td>
-<td>dependent variable(s)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(t\)</span></td>
-<td>independent variable(s)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\frac{\mathrm{d}Q}{\mathrm{d}t}\)</span></td>
-<td>differential(s)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta\)</span></td>
-<td>parameter(s)/constant(s)</td>
-</tr>
-</tbody>
-</table>
-<ol start="2" type="a">
-<li><table class="table">
-<thead>
-<tr class="header">
-<th>physical notation</th>
-<th>generic notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\theta\)</span></td>
-<td>dependent variable(s)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(t\)</span></td>
-<td>independent variable(s)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\frac{\mathrm{d}^2\theta}{\mathrm{d} t^2}\)</span></td>
-<td>differential(s)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(l\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(g\)</span></td>
-<td>parameter(s)/constant(s)</td>
-</tr>
-</tbody>
-</table></li>
-</ol>
+<p>Analysis: I don’t have a card. I do have second-class stamps. I prefer to buy a card rather than make one myself. Ruby’s birthday is in four days. Ruby lives in the UK. A second-class card will arrive in three days.</p>
 </div>
 </div>
+</section>
+<section id="step-3-develop-a-high-level-algorithm." class="level2">
+<h2 class="anchored" data-anchor-id="step-3-develop-a-high-level-algorithm.">Step 3: Develop a high-level algorithm.</h2>
+<p>An algorithm is a plan for solving a problem, but plans come in several levels of detail. It’s usually better to start with a high-level algorithm that includes the major part of a solution, but leaves the details until later.</p>
+<p>We can use an everyday example to demonstrate a high-level algorithm. This high-level algorithm can be written as pseudo-code.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Everyday example
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>High-level algorithm:</p>
+<ul>
+<li>Go to a shop that sells greeting cards</li>
+<li>Select a card</li>
+<li>Purchase a card</li>
+<li>Attach a stamp</li>
+<li>Post the card</li>
+</ul>
+</div>
+</div>
+<p>This algorithm is satisfactory as general guidance, but it lacks details that would have to be added were a computer to carry out the solution.</p>
+<p>These details include answers to questions such as the following.</p>
+<ul>
+<li>Which shop will I visit?</li>
+<li>How will I get there: walk, drive, ride my bicycle, take the bus?</li>
+<li>What kind of card does Ruby like: humorous, sentimental, risqué?</li>
+</ul>
+<p>These kinds of details are considered in the next step of our process.</p>
+</section>
+<section id="step-4-refine-the-algorithm-by-adding-more-detail." class="level2">
+<h2 class="anchored" data-anchor-id="step-4-refine-the-algorithm-by-adding-more-detail.">Step 4: Refine the algorithm by adding more detail.</h2>
+<p>A high-level algorithm shows the major steps that need to be followed to solve a problem. Now we need to add details to these steps, but how much detail should we add? Unfortunately, the answer to this question depends on the situation. We have to consider who (or what) is going to implement the algorithm and how much that person (or thing) already knows how to do.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Everyday example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If I’m going to purchase a birthday card for somebody else, the instructions have to be adapted to whether or not I am familiar with the shops in the community and how well I understand their taste in greeting cards.</p>
+</div>
+</div>
+<p>When our goal is to develop algorithms that will lead to computer programs, we need to consider the capabilities of the computer and provide enough detail so that someone else could use our algorithm to write a computer program that follows the steps in our algorithm. As with the birthday card problem, we need to adjust the level of detail to match the ability of the programmer. When in doubt, or when you are learning, it is better to have too much detail than to have too little.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Everyday example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Refined algorithm:</p>
+<ul>
+<li>Take the 44 bus to Haymarket</li>
+<li>Go to Hallmark shop on Northumberland street</li>
+<li>Select the funniest birthday card you can find</li>
+<li>Purchase the card using my bank card</li>
+<li>Attach the second class stamp to the envelope</li>
+<li>Write Ruby’s address:</li>
+<li>Place card in envelope</li>
+<li>Go to the post box</li>
+<li>Post card</li>
+</ul>
+</div>
+</div>
+<p>For larger, more complex problems, it is common to go through this process several times, developing intermediate level algorithms as we go. Each time, we add more detail to the previous algorithm, stopping when we see no benefit to further refinement. This technique of gradually working from a high-level to a detailed algorithm is often called stepwise refinement. At each step we may need to communicate with our collaborators to improve the problem description.</p>
+</section>
+<section id="step-5-review-the-algorithm." class="level2">
+<h2 class="anchored" data-anchor-id="step-5-review-the-algorithm.">Step 5: Review the algorithm.</h2>
+<p>The final step is to review the algorithm. First, we need to work through the algorithm step by step to determine whether or not it will solve the original problem.</p>
+<ul>
+<li>Does it establish the facts required?</li>
+<li>Does it output or update the items as specified?</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Everyday example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Will the card reach Ruby in time for her birthday? Will Ruby like the card?</p>
+</div>
+</div>
+</section>
+<section id="step-6-implement-the-algorithm-as-code" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-implement-the-algorithm-as-code">Step 6: Implement the algorithm as code</h2>
+<p>At this point we have established an algorithm for tackling the problem, but it is not implemented as code.</p>
+<p>In this step we translate the algorithm into a programming language of our choice.</p>
+</section>
+<section id="step-7-review-the-results" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-review-the-results">Step 7: Review the results</h2>
+<p>Next we want to establish that our results are reasonable.</p>
+<ul>
+<li>Are there related problems which we know the solution to? How does our solution compare?</li>
+</ul>
+<p>For quantitative solutions we can also ask the following questions:</p>
+<ul>
+<li>Is our solution the correct order of magnitude?</li>
+<li>Are the units of measure consistent?</li>
+</ul>
+</section>
+<section id="step-8-review-the-code" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-review-the-code">Step 8: Review the code</h2>
+<p>Once we are satisfied that the algorithm does provide a solution to the problem, we start to look for other things. The following questions are typical of ones that should be asked whenever we review an algorithm.</p>
+<ul>
+<li>Does this code solve a very specific problem or does it solve a more general problem?</li>
+<li>If it solves a very specific problem, should it be generalized?</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A code that computes the area of a circle having radius 5.2 meters (formula <span class="math inline">\(π*5.22\)</span>) solves a very specific problem, but an algorithm that computes the area of any circle (formula <span class="math inline">\(π*R^2\)</span>) solves a more general problem.</p>
+</div>
+</div>
+<ul>
+<li>Can this algorithm be simplified?</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For example, one formula for computing the perimeter of a rectangle is: length + width + length + width</p>
+<p>A simpler formula would be: <span class="math inline">\(2.0 * (\textrm{length} + \textrm{width})\)</span></p>
+</div>
+</div>
+<ul>
+<li>Is this solution similar to the solution to another problem? How are they alike? How are they different?</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following two formulae:</p>
+<p><span class="math inline">\(\textrm{Rectangle area} = \textrm{length} * \textrm{width}\)</span></p>
+<p><span class="math inline">\(\textrm{Triangle area} = 0.5 * \textrm{base} * \textrm{height}\)</span></p>
+<p>Similarities: Each computes an area. Each multiplies two measurements.</p>
+<p>Differences: Different measurements are used. The triangle formula contains 0.5.</p>
+<p>Hypothesis: Perhaps every area formula involves multiplying two measurements.</p>
 </div>
 </div>
 

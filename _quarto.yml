@@ -59,6 +59,8 @@ website:
              - notebooks/FTCS_method.ipynb
              - href: markdown/PDE_questions.qmd
                text: Questions
+          - href: notebooks/problem_solving.ipynb
+            text: Problem Solving
       - section: "Getting It Out There"
         contents:
           - href: markdown/out_there_introduction.qmd
