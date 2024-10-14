@@ -354,7 +354,7 @@
     "href": "notebooks/problem_solving.html#step-7-review-the-results",
     "title": "Problem Solving and Algorithms",
     "section": "Step 7: Review the results",
-    "text": "Step 7: Review the results\nNext we want to establish that our results are reasonable.\n\nAre there related problems which we know the solution to? How does our solution compare?\n\nFor quantitative solutions we can also ask the following questions:\n\nIs our solution the correct order of magnitude?\nAre the units of measure consistent?"
+    "text": "Step 7: Review the results\nNext we want to establish that our results are reasonable.\n\nAre there related problems which we know the solution to? How does our solution compare?\n\nFor quantitative solutions we can also ask the following questions:\n\nIs our solution the correct order of magnitude?\nAre the units of measure consistent?\n\nWhere specific hardware resource or time constraints are imposed: - Are these satisfied with an acceptable numerical error? If not, could the code be made more efficient, or alternative functions/methods be implemented?"
   },
   {
     "objectID": "notebooks/problem_solving.html#step-8-review-the-code",
