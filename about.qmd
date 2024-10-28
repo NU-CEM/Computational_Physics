@@ -6,12 +6,13 @@ This website contains resources for the second year course "Theory, computation 
 
 The website is powered by a [Github repository](https://github.com/NU-CEM/Computational_Physics/), [Quarto](https://quarto.org/) and [Jupyter Notebook](https://jupyter.org). Text is formatted with Markdown and equations are formatted with LaTeX. 
 
+Students taking this class at Northumbria have been encouraged to raise a Github Issue or Pull Request when they spot a mistake or to suggest an improvement. These students are: @CharlieKellam, @TSGardner, @connorwatson128, @PyLief, @wheelchairscienceguy, @Jlcode7. Ross Pallistar has supported delivery as a TA, and made improvements to the website. 
+
 Some of the website content is adapted and derived from several other sources:
 
 - The Setup instructions page is a derivative of materials from [Software Carpentry](https://software-carpentry.org/), used under [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 - The tutorial "Testing and Documentation" is a derivative of the [Testing lesson from Code Refinery](https://coderefinery.github.io/testing/motivation/"), used under [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). 
 - Some of the exercises are adapted from the book [Computational Physics](http://www-personal.umich.edu/~mejn/cp/). These are used with the permission of the book's author, Mark Newman, and remain under his copyright. 
-
-In addition, parts of the "Getting results" section were inspired by [Rudolf Winter's notes on ODEs and PDEs](https://users.aber.ac.uk/ruw/teach/260/).
+- Some of the "Getting results" section were inspired by [Rudolf Winter's notes on ODEs and PDEs](https://users.aber.ac.uk/ruw/teach/260/).
 
 The content of this website unless otherwise indicated is licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). You can re-use any original content as long as an attribution is included, and you indicate if changes were made.
